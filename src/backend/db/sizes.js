@@ -1,29 +1,34 @@
 import { v4 as uuid } from "uuid";
 
-export const categories = [
+export const sizes = [
   {
     _id: uuid(),
-    categoryName: "Topwear",
+    size: "S",
     description: "",
   },
   {
     _id: uuid(),
-    categoryName: "Bottomwear",
+    size: "M",
     description: "",
   },
   {
     _id: uuid(),
-    categoryName: "Loungewear",
+    size: "L",
     description: "",
   },
   {
     _id: uuid(),
-    categoryName: "Nightsuit",
+    size: "XL",
     description: "",
   },
   {
     _id: uuid(),
-    categoryName: "Nightdress",
+    size: "XXL",
+    description: "",
+  },
+  {
+    _id: uuid(),
+    size: "3XL",
     description: "",
   },
 ];
