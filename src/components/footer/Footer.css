@@ -1,0 +1,33 @@
+:root {
+  --primary-color: #813772;
+  --white-color: #fff;
+}
+
+.footer {
+  background-color: var(--primary-color);
+  padding: 1rem 0.5rem;
+  text-align: center;
+  color: var(--white-color);
+  border-top-right-radius: 1rem;
+}
+
+.footer .footer-header {
+  font-weight: bold;
+}
+
+.footer a {
+  color: var(--white-color);
+}
+
+.footer ul {
+  padding-inline-start: 0px;
+}
+
+.list-non-bullet {
+  list-style: none;
+}
+
+.list-item-inline {
+  display: inline;
+  padding: 0rem 0.5rem;
+}
