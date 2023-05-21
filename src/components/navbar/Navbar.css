@@ -1,0 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Calligraffitti&display=swap");
+
+:root {
+  --primary-color: #813772;
+  --white-color: #fff;
+}
+
+.navigation {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  padding: 1rem 1rem;
+  border-bottom-left-radius: 0.5rem;
+}
+
+.nav-brand {
+  position: absolute;
+  font-family: "Calligraffitti", cursive;
+  font-size: xx-large;
+  font-weight: 500;
+}
+
+.link {
+  color: var(--white-color);
+  padding: 0.5rem;
+  margin: 0.5rem;
+  text-decoration: none;
+}
+
+.nav-explore .link {
+  font-size: x-large;
+}
