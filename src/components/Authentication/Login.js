@@ -1,10 +1,14 @@
 import React, { useContext, useState } from "react";
 import { AuthContext } from "../../contexts/AuthContext";
 import axios from "axios";
+import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState({ hasError: false, errorMessage: "" });
   const { setIsLoggedIn } = useContext(AuthContext);
 
@@ -17,6 +21,8 @@ function Login() {
       setError({ hasError: false, errorMessage: "" });
       setEmail("");
       setPassword("");
+      console.log(response);
+      toast.success("SignUp Successful");
       // localStorage.getItem("authenticationToken");
     } catch (e) {
       console.error(e);
@@ -46,11 +52,18 @@ function Login() {
         <label>
           Password:{" "}
           <input
-            type="password"
+            type={showPassword ? "text" : "password"}
             required
             value={password}
             onChange={(event) => setPassword(event.target.value)}
           />
+          <label
+            onClick={() => {
+              setShowPassword((prev) => !prev);
+            }}
+          >
+            {showPassword ? <AiOutlineEye /> : <AiOutlineEyeInvisible />}
+          </label>
         </label>
         {error.hasError && <span>{error.errorMessage}</span>}
         <button type="submit">Login</button>
