@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Calligraffitti&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap");
+
+:root {
+  --primary-color: #813772;
+  --secondary-color: #f5d0fe;
+  --white-color: #fff;
+  --gray-color: #808080;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.product-listing-page {
+  font-family: "Quicksand", sans-serif;
+  display: flex;
+  /* flex-wrap: wrap; */
+}
+
+.filters {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+
+.filters-clear-div {
+  display: flex;
+}
+
+.filters-p {
+  font-weight: bold;
+  margin-block-end: 0.5rem;
+  text-align: left;
+}
+
+.clear-filters {
+  color: var(--gray-color);
+  margin-left: auto;
+}
+
+.filters-price-div {
+  display: flex;
+  flex-direction: column;
+}
+
+.filters-price-div filters-p {
+  margin-block-start: 0rem;
+  margin-block-end: 0rem;
+}
+
+.filters-sorting-div p {
+  margin-block-start: 0rem;
+  margin-block-end: 0rem;
+}
+
+.price-range-labels {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 0.25rem;
+}
+
+.price-range-labels p {
+  color: var(--gray-color);
+  margin-block-end: 0rem;
+  margin-block-start: 0rem;
+}
+
+.each-checkbox-and-p-div {
+  display: flex;
+  gap: 0.2rem;
+}
+
+.each-checkbox-and-p-div p {
+  margin-block-start: 0rem;
+  margin-block-end: 0rem;
+}
+
+.all-products-div {
+  display: flex;
+  flex-wrap: wrap;
+}

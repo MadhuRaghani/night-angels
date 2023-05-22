@@ -23,7 +23,6 @@ function App() {
         <Route path="/cart" element={<Cart />} />
         <Route path="/mockman" element={<Mockman />} />
       </Routes>
-
       <Footer />
     </div>
   );

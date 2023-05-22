@@ -1,24 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext } from "react";
 import "../home/Home.css";
-import axios from "axios";
 import CategoryCard from "./CategoryCard";
+import { ProductsContext } from "../../contexts/ProductsContext";
 
 function Home() {
-  const [categories, setCategories] = useState([]);
-
-  useEffect(() => {
-    (async () => {
-      try {
-        const response = await axios.get("/api/categories", {});
-        if (response.status === 200) {
-          setCategories(response.data.categories);
-        }
-        // console.log(response, response.data.categories);
-      } catch (e) {
-        console.error(e);
-      }
-    })();
-  }, []);
+  const { categories } = useContext(ProductsContext);
 
   return (
     <div className="home">
