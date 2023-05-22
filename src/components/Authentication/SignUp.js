@@ -5,6 +5,7 @@ import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "../authentication/Auth.css";
+import { Link } from "react-router-dom";
 
 function SignUp() {
   const [signUpData, setSignUpData] = useState({
@@ -192,6 +193,11 @@ function SignUp() {
               </button>
             </div>
           </form>
+        </div>
+        <div className="signup-login-div">
+          <p>
+            Already Have an Account? <Link to="/login">Login?</Link>
+          </p>
         </div>
         <div className="error-main">
           {error.hasError && (
