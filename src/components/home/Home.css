@@ -1,0 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap");
+
+:root {
+  --primary-color: #813772;
+  --white-color: #fff;
+}
+
+.hero-img {
+  width: 100%;
+  display: block;
+}
+
+.home {
+  font-family: "Quicksand", sans-serif;
+}
+
+/* .hero-heading {
+  text-align: center;
+  padding-top: 1rem;
+  color: var(--gray-color);
+} */

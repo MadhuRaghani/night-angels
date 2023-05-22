@@ -1,7 +1,8 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import Mockman from "mockman-js";
-import Home from "./components/Home";
+// import Home from "./components/Home";
+import Home from "./components/home/Home";
 import Login from "./components/authentication/Login";
 import SignUp from "./components/authentication/SignUp";
 import ProductListing from "./components/products/ProductListing";
