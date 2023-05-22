@@ -17,13 +17,6 @@ export const categories = [
   },
   {
     _id: uuid(),
-    categoryName: "Loungewear",
-    description: "Check out our best Lounge Wear Collection",
-    image:
-      "https://image.clovia.com/media/clovia-images/images/400x600/clovia-picture-ls0592r03-589836.jpg",
-  },
-  {
-    _id: uuid(),
     categoryName: "Nightsuit",
     description: "Check out our best Night Suit Collection",
     image:
