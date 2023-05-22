@@ -247,7 +247,7 @@ export const products = [
     sizesAvailable: ["S", "M", "L", "XL", "XXL", "3XL"],
     image:
       "https://image.clovia.com/media/clovia-images/images/400x600/clovia-picture-ls0592r03-589836.jpg",
-    category: "Nightsuit",
+    category: "Loungewear",
     fabric: "cotton",
     color: "blue",
     new_arrivals: true,
@@ -265,7 +265,7 @@ export const products = [
     sizesAvailable: ["S", "XXL", "3XL"],
     image:
       "https://image.clovia.com/media/clovia-images/images/400x600/clovia-picture-chic-basic-button-me-up-shirt-pyjama-set-in-soft-pink-modal-759952.jpg",
-    category: "Nightsuit",
+    category: "Loungewear",
     fabric: "modal",
     color: "pink",
     new_arrivals: false,
@@ -283,7 +283,7 @@ export const products = [
     sizesAvailable: ["S", "XXL", "3XL"],
     image:
       "https://image.clovia.com/media/clovia-images/images/400x600/clovia-picture-chic-basic-top-pyjama-set-in-baby-pink-velour-326603.jpg",
-    category: "Nightsuit",
+    category: "Loungewear",
     fabric: "velour",
     color: "pink",
     new_arrivals: false,
@@ -301,7 +301,7 @@ export const products = [
     sizesAvailable: ["S", "M", "L", "XL", "XXL", "3XL"],
     image:
       "https://image.clovia.com/media/clovia-images/images/400x600/clovia-picture-chic-basic-top-pyjama-shrug-set-in-black-velour-572703.jpg",
-    category: "Nightsuit",
+    category: "Loungewear",
     fabric: "velour",
     color: "black",
     new_arrivals: true,
@@ -319,7 +319,7 @@ export const products = [
     sizesAvailable: ["S", "L", "XL"],
     image:
       "https://image.clovia.com/media/clovia-images/images/400x600/clovia-picture-chic-basic-button-me-up-shirt-pyjama-set-in-dusky-pink-satin-426522.jpg",
-    category: "Nightsuit",
+    category: "Loungewear",
     fabric: "rayon",
     color: "pink",
     new_arrivals: false,
@@ -337,7 +337,7 @@ export const products = [
     sizesAvailable: ["S", "L", "XL"],
     image:
       "https://image.clovia.com/media/clovia-images/images/400x600/clovia-picture-sassy-stripes-top-pyjama-robe-set-in-maroon-rayon-513226.jpg",
-    category: "Nightsuit",
+    category: "Loungewear",
     fabric: "rayon",
     color: "maroon",
     new_arrivals: false,
@@ -355,7 +355,7 @@ export const products = [
     sizesAvailable: ["S", "M", "L", "XL", "XXL", "3XL"],
     image:
       "https://image.clovia.com/media/clovia-images/images/400x600/clovia-picture-cotton-rich-pyjama-1-729815.jpg",
-    category: "Nightsuit",
+    category: "Loungewear",
     fabric: "cotton",
     color: "black",
     new_arrivals: true,

@@ -36,6 +36,7 @@ function Footer() {
           </a>
         </li>
       </ul>
+      <span>© No Copyright, Feel free to replicate.</span>
     </footer>
   );
 }
