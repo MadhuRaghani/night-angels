@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Calligraffitti&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Wix+Madefor+Display:wght@400;500;600;700;800&display=swap");
 
 :root {
   --primary-color: #813772;
@@ -13,7 +13,7 @@
 }
 
 .product-listing-page {
-  font-family: "Quicksand", sans-serif;
+  font-family: "Wix Madefor Display", sans-serif;
   display: flex;
   /* flex-wrap: wrap; */
 }
@@ -79,4 +79,126 @@
 .all-products-div {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  /* gap: 1rem; */
+}
+
+.product-card {
+  width: 8rem;
+  font-size: smaller;
+  border: 1px solid black;
+  padding: 0.2rem;
+  margin: 0.2rem;
+}
+
+.image-card-div img {
+  width: 100%;
+  height: 12rem;
+}
+
+.image-card-div {
+  position: relative;
+}
+
+.new-arrivals-div {
+  position: absolute;
+  z-index: 99;
+  top: 0;
+  /* left: 0; */
+  right: 0;
+  font-size: xx-small;
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  border-radius: 0.2rem;
+}
+
+/* .wishlist-div {
+  position: absolute;
+  z-index: 99;
+  top: 0;
+  right: 0;
+  padding: 0.1rem;
+} */
+
+.ratings-reviews-div {
+  position: absolute;
+  z-index: 99;
+  bottom: 0.2rem;
+  right: 0;
+  padding: 0.2rem;
+  font-size: smaller;
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  border-radius: 0.2rem;
+}
+
+.product-details-card-div {
+  display: flex;
+  flex-direction: column;
+  /* gap: 0.2rem; */
+}
+
+.title-div p {
+  margin-block-start: 0rem;
+  margin-block-end: 0.1rem;
+  text-align: left;
+}
+
+.product-brand {
+  font-weight: bold;
+}
+
+.product-title {
+  font-size: x-small;
+  color: var(--gray-color);
+  white-space: nowrap;
+  /* width: 50px;  */
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.price-and-discount-div {
+  display: flex;
+  justify-content: space-between;
+  font-size: smaller;
+}
+
+.product-original-price {
+  text-decoration: line-through;
+  color: var(--gray-color);
+}
+
+.product-price {
+  font-weight: bold;
+  margin-right: 0.2rem;
+}
+
+.product-discount {
+  color: red;
+  font-weight: lighter;
+  font-weight: 200;
+}
+
+.add-to-cart-btn-div {
+  margin-top: 0.2rem;
+  display: flex;
+  gap: 0.2rem;
+}
+
+.add-to-cart-btn {
+  width: 100%;
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  border-radius: 0.2rem;
+  border-color: var(--secondary-color);
+  padding: 0.2rem;
+}
+
+.out-of-stock-label {
+  background-color: var(--gray-color);
+  color: var(--white-color);
+  padding: 0.2rem;
+  border-radius: 0.2rem;
+  display: flex;
+  align-items: center;
 }

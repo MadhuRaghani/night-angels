@@ -1,27 +1,28 @@
 import { v4 as uuid } from "uuid";
 
 export const products = [
+  // {
+  //   _id: uuid(),
+  //   title: "Assorted Tank top",
+  //   description:
+  //     "This is a stylish, trendy and modern tank top from the house of Clovia. It features a high degree of stretchability due to its fabric. Also, it is considered as an ideal choice for activewear. For those looking for a fine blend of comfort and style, this is a perfect choice. As it is a sleeveless tank top, it further adds to the glam quotient and makes one look all the more appealing.",
+  //   original_price: "499",
+  //   price: "159",
+  //   rating: "4.1",
+  //   sizesAvailable: ["S", "M", "L"],
+  //   image:
+  //     "https://image.clovia.com/media/clovia-images/images/400x600/clovia-picture-assorted-tank-top-572829.jpg",
+  //   category: "Topwear",
+  //   brand: "ETC",
+  //   fabric: "lycra",
+  //   color: "red",
+  //   new_arrivals: false,
+  //   reviews: "4.5K",
+  //   delivery_time: "2",
+  // },
   {
     _id: uuid(),
-    title: "Assorted Tank top",
-    description:
-      "This is a stylish, trendy and modern tank top from the house of Clovia. It features a high degree of stretchability due to its fabric. Also, it is considered as an ideal choice for activewear. For those looking for a fine blend of comfort and style, this is a perfect choice. As it is a sleeveless tank top, it further adds to the glam quotient and makes one look all the more appealing.",
-    original_price: "499",
-    price: "159",
-    rating: "4.1",
-    sizesAvailable: ["S", "M", "L"],
-    image:
-      "https://image.clovia.com/media/clovia-images/images/400x600/clovia-picture-assorted-tank-top-572829.jpg",
-    category: "Topwear",
-    fabric: "lycra",
-    color: "red",
-    new_arrivals: false,
-    reviews: "4.5K",
-    delivery_time: "2",
-  },
-  {
-    _id: uuid(),
-    title: "Tank Top in White",
+    title: "Tank Top",
     description:
       "Team this white-coloured tank top with a pair of comfy jeans and sneakers and your stylish look is complete. Made with cotton fabric, it is soft and comfortable to wear. Additionally, this sleeveless tank top has a round neckline and a racerback. This tank top features four-way stretchable fabric that is crease-free and doesn’t roll up. This fabric has a high degree of flexibility, which makes this top ideal for workouts. You can also use this tank top as a layering canvas over a shrug of your choice.",
     original_price: "499",
@@ -31,6 +32,7 @@ export const products = [
     image:
       "https://image.clovia.com/media/clovia-images/images/400x600/clovia-picture-cotton-racerback-tank-top-1-355314.jpg",
     category: "Topwear",
+    brand: "Kanvin",
     fabric: "cotton",
     color: "white",
     new_arrivals: true,
@@ -39,7 +41,7 @@ export const products = [
   },
   {
     _id: uuid(),
-    title: "Quirky Text Top in Dark Pink",
+    title: "Quirky Text Top",
     description:
       "Dark pink T-shirt crafted with 100% cotton fabric.Designed with quirky text print on the chest.Has a round neckline and short sleeves.",
     original_price: "999",
@@ -49,6 +51,7 @@ export const products = [
     image:
       "https://image.clovia.com/media/clovia-images/images/400x600/clovia-picture-quirky-text-top-in-dark-pink-100-cotton-677199.jpg",
     category: "Topwear",
+    brand: "FashionRack",
     fabric: "cotton",
     color: "pink",
     new_arrivals: false,
@@ -57,7 +60,7 @@ export const products = [
   },
   {
     _id: uuid(),
-    title: "Music Magic Top in Dark Pink",
+    title: "Music Magic Top",
     description:
       "Dark pink T-shirt crafted with 100% cotton fabric. Designed with cool headphone and text print at the chest. Has a round neckline and short sleeves.",
     original_price: "999",
@@ -67,6 +70,7 @@ export const products = [
     image:
       "https://image.clovia.com/media/clovia-images/images/400x600/clovia-picture-lt0124f14-726353.JPG",
     category: "Topwear",
+    brand: "Kryptic",
     fabric: "cotton",
     color: "pink",
     new_arrivals: true,
@@ -75,7 +79,7 @@ export const products = [
   },
   {
     _id: uuid(),
-    title: "Chic Basic Top in Black",
+    title: "Chic Basic Top",
     description:
       "Black top crafted with soft cotton rich fabric. Designed with round neck & short sleeves.",
     original_price: "899",
@@ -85,6 +89,7 @@ export const products = [
     image:
       "https://image.clovia.com/media/clovia-images/images/400x600/clovia-picture-chic-basic-top-in-black-cotton-rich-1-898972.jpg",
     category: "Topwear",
+    brand: "Dreamz",
     fabric: "cotton",
     color: "black",
     new_arrivals: false,
@@ -93,7 +98,7 @@ export const products = [
   },
   {
     _id: uuid(),
-    title: "But First Coffee Top in Blue",
+    title: "But First Coffee Top",
     description:
       "Light grey printed top crafted with premium cotton fabric. Designed wtih round neckline and short sleeves.",
     original_price: "999",
@@ -103,6 +108,7 @@ export const products = [
     image:
       "https://image.clovia.com/media/clovia-images/images/400x600/clovia-picture-printed-top-in-light-grey-100-cotton-937622.jpg",
     category: "Topwear",
+    brand: "evolove",
     fabric: "cotton",
     color: "blue",
     new_arrivals: true,
@@ -111,7 +117,7 @@ export const products = [
   },
   {
     _id: uuid(),
-    title: "Chic Basic Pyjama in Blue",
+    title: "Chic Basic Pyjama",
     description:
       "Blue pyjama crafted with soft crepe fabric. Elasticated waistband & pockets on both sides.",
     original_price: "1299",
@@ -121,6 +127,7 @@ export const products = [
     image:
       "https://image.clovia.com/media/clovia-images/images/400x600/clovia-picture-lb0186p08-829429.JPG",
     category: "Bottomwear",
+    brand: "Berrylush",
     fabric: "crepe",
     color: "blue",
     new_arrivals: false,
@@ -129,7 +136,7 @@ export const products = [
   },
   {
     _id: uuid(),
-    title: "Pretty Florals Pyjama in Multicolour",
+    title: "Pretty Florals Pyjama",
     description:
       "Multicolour pyjama crafted with soft velour fabric. Designed with floral print all over. Has an elasticated waistband for snug fit. Pockets on both sides.",
     original_price: "2749",
@@ -139,6 +146,7 @@ export const products = [
     image:
       "https://image.clovia.com/media/clovia-images/images/400x600/clovia-picture-lb0139a19-479514.jpg",
     category: "Bottomwear",
+    brand: "ETC",
     fabric: "cotton",
     color: "multi",
     new_arrivals: false,
@@ -148,7 +156,7 @@ export const products = [
   },
   {
     _id: uuid(),
-    title: "Chic Basic Cuffed Joggers in Light Grey",
+    title: "Chic Basic Cuffed Joggers",
     description:
       "Light grey joggers crafted with super-soft loop knit fleece fabric. Has an elasticated waistband with a fastening drawstring. Cuffed leg openings for comfort fit. Has pockets on both sides.",
     original_price: "1899",
@@ -158,6 +166,7 @@ export const products = [
     image:
       "https://image.clovia.com/media/clovia-images/images/400x600/clovia-picture-chic-basic-cuffed-joggers-in-light-grey-loop-knit-683076.jpg",
     category: "Bottomwear",
+    brand: "Berrylush",
     fabric: "knitted",
     color: "grey",
     new_arrivals: true,
@@ -166,7 +175,7 @@ export const products = [
   },
   {
     _id: uuid(),
-    title: "Chic Basic Wide Leg Pants in Maroon",
+    title: "Chic Basic Wide Leg Pants",
     description:
       "Maroon wide leg pants crafted with soft rayon fabric. Has a button closure & loops at the waist. Pockets on both sides.",
     original_price: "1999",
@@ -176,6 +185,7 @@ export const products = [
     image:
       "https://image.clovia.com/media/clovia-images/images/400x600/clovia-picture-lb0192p09-476683.jpg",
     category: "Bottomwear",
+    brand: "evolove",
     fabric: "rayon",
     color: "maroon",
     new_arrivals: true,
@@ -184,7 +194,7 @@ export const products = [
   },
   {
     _id: uuid(),
-    title: "Print Me Pretty Boxer Shorts in White",
+    title: "Print Me Pretty Boxer Shorts",
     description:
       "White boxer shorts crafted with soft 100% cotton fabric. Designed with heart print all over. Has an elasticated waist for a snug fit. Has pockets on each side.",
     original_price: "1099",
@@ -194,6 +204,7 @@ export const products = [
     image:
       "https://image.clovia.com/media/clovia-images/images/400x600/clovia-picture-lb0174k18-452064.jpg",
     category: "Bottomwear",
+    brand: "Dreamz",
     fabric: "cotton",
     color: "white",
     new_arrivals: true,
@@ -202,16 +213,17 @@ export const products = [
   },
   {
     _id: uuid(),
-    title: "Sassy Stripes Boxer Shorts in White",
+    title: "Sassy Stripes Boxer Shorts",
     description:
       "White & black striped boxer shorts crafted with soft & premium 100% cotton fabric. Has an elasticated waist for a snug fit. Pockets on each side.",
     original_price: "999",
     price: "399",
     rating: "3.8",
-    sizesAvailable: ["S", "XXL", "3XL"],
+    sizesAvailable: [],
     image:
       "https://image.clovia.com/media/clovia-images/images/400x600/clovia-picture-lb0174y18-911802.jpg",
     category: "Bottomwear",
+    brand: "Kryptic",
     fabric: "cotton",
     color: "white",
     new_arrivals: false,
@@ -220,7 +232,7 @@ export const products = [
   },
   {
     _id: uuid(),
-    title: "Print Me Pretty Pyjama in Red",
+    title: "Print Me Pretty Pyjama",
     description:
       "Red pyjama crafted with soft rayon fabric. Designed with triangle print all over. Elasticated waistband for a snug fit. Pockets on both sides.",
     original_price: "2049",
@@ -230,6 +242,7 @@ export const products = [
     image:
       "https://image.clovia.com/media/clovia-images/images/400x600/clovia-picture-lb0179e04-309727.jpg",
     category: "Bottomwear",
+    brand: "FashionRack",
     fabric: "rayon",
     color: "red",
     new_arrivals: true,
@@ -238,7 +251,7 @@ export const products = [
   },
   {
     _id: uuid(),
-    title: "Print Me Pretty Kaftan Top & Pyjama in Sky Blue",
+    title: "Print Me Pretty Kaftan Top & Pyjama",
     description:
       "Sky blue printed kaftan top & pyjama set crafted with soft & premium 100% cotton fabric. Kaftan top has a V-neckine & short sleeves. Has an elasticated underbust with tie-up detail. Matching pyjama has an elasticated waistband for snug fit. Pockets on both side.",
     original_price: "2599",
@@ -248,6 +261,7 @@ export const products = [
     image:
       "https://image.clovia.com/media/clovia-images/images/400x600/clovia-picture-ls0592r03-589836.jpg",
     category: "Loungewear",
+    brand: "Kanvin",
     fabric: "cotton",
     color: "blue",
     new_arrivals: true,
@@ -256,16 +270,17 @@ export const products = [
   },
   {
     _id: uuid(),
-    title: "Chic Basic Button Down Shirt & Pyjama Set in Soft Pink",
+    title: "Chic Basic Button Down Shirt & Pyjama Set",
     description:
       "Soft pink button down shirt & pyjama set crafted with soft cotton modal fabric. Shirt with full button placket & short sleeves. Has frilled edges at the sleeves & hemline. Matching pyjama with elasticated waistband & drawstring fastening for a snug fit. Pockets on both sides.",
     original_price: "2499",
     price: "1999",
     rating: "4.1",
-    sizesAvailable: ["S", "XXL", "3XL"],
+    sizesAvailable: [],
     image:
       "https://image.clovia.com/media/clovia-images/images/400x600/clovia-picture-chic-basic-button-me-up-shirt-pyjama-set-in-soft-pink-modal-759952.jpg",
     category: "Loungewear",
+    brand: "ETC",
     fabric: "modal",
     color: "pink",
     new_arrivals: false,
@@ -274,7 +289,7 @@ export const products = [
   },
   {
     _id: uuid(),
-    title: "Chic Basic Top & Pyjama Set in Baby Pink",
+    title: "Chic Basic Top & Pyjama Set",
     description:
       "Baby pink top and pyjama set crafted with soft & cosy velour fabric. Top has a round neck & full sleeves with elasticated cuffs. Matching pyjama with soft elastic at the waistband. Pockets on both sides.",
     original_price: "3499",
@@ -284,6 +299,7 @@ export const products = [
     image:
       "https://image.clovia.com/media/clovia-images/images/400x600/clovia-picture-chic-basic-top-pyjama-set-in-baby-pink-velour-326603.jpg",
     category: "Loungewear",
+    brand: "Kanvin",
     fabric: "velour",
     color: "pink",
     new_arrivals: false,
@@ -292,7 +308,7 @@ export const products = [
   },
   {
     _id: uuid(),
-    title: "Chic Basic Top, Pyjama & Shrug Set in Black",
+    title: "Chic Basic Top, Pyjama & Shrug Set",
     description:
       "Black top, pyjama & shrug set crafted with soft & cosy velour fabric. Cami top with a round neck. Comes with a matching shrug that has full sleeves. Pyjama with an elasticated waistband for a snug fit. Has pockets on both sides.",
     original_price: "3299",
@@ -302,6 +318,7 @@ export const products = [
     image:
       "https://image.clovia.com/media/clovia-images/images/400x600/clovia-picture-chic-basic-top-pyjama-shrug-set-in-black-velour-572703.jpg",
     category: "Loungewear",
+    brand: "FashionRack",
     fabric: "velour",
     color: "black",
     new_arrivals: true,
@@ -310,7 +327,7 @@ export const products = [
   },
   {
     _id: uuid(),
-    title: "Chic Basic Button Down Shirt & Pyjama Set in Dusky Pink",
+    title: "Chic Basic Button Down Shirt & Pyjama Set",
     description:
       "Dusky pink button-down shirt & pyjama set crafted with smooth rayon fabric. Has a full button placket & 3/4 sleeves. Matching pyjama with elasticated waistband for snug fit. Pockets on both sides.",
     original_price: "999",
@@ -320,6 +337,7 @@ export const products = [
     image:
       "https://image.clovia.com/media/clovia-images/images/400x600/clovia-picture-chic-basic-button-me-up-shirt-pyjama-set-in-dusky-pink-satin-426522.jpg",
     category: "Loungewear",
+    brand: "Kryptic",
     fabric: "rayon",
     color: "pink",
     new_arrivals: false,
@@ -328,16 +346,17 @@ export const products = [
   },
   {
     _id: uuid(),
-    title: "Sassy Stripes 3 Piece Set- Top, Pyjama & Robe in Maroon",
+    title: "Sassy Stripes 3 Piece Set- Top, Pyjama & Robe",
     description:
       "Top, pyjama, and robe set crafted with rayon fabric. Maroon striped top designed with a round neck and 3/4 sleeves. Matching pyjama with an elasticated waistband for a snug fit. Pockets on both sides. Comes with a stylish robe with 3/4 sleeves and tie-ups.",
     original_price: "2499",
     price: "1007",
     rating: "3.5",
-    sizesAvailable: ["S", "L", "XL"],
+    sizesAvailable: [],
     image:
       "https://image.clovia.com/media/clovia-images/images/400x600/clovia-picture-sassy-stripes-top-pyjama-robe-set-in-maroon-rayon-513226.jpg",
     category: "Loungewear",
+    brand: "Dreamz",
     fabric: "rayon",
     color: "maroon",
     new_arrivals: false,
@@ -346,7 +365,7 @@ export const products = [
   },
   {
     _id: uuid(),
-    title: "Cotton Rich Pyjama In Black",
+    title: "Cotton Rich Pyjama",
     description:
       "Made using the soft and breathable rich-cotton fabric for maximum ease and comfort all day long, this stylish pyjama comes with soft and flexible elastic band at the waistline to avoid slide down and provide a better and comfortable fit. Its fabric gives a smooth feel on the skin. The pyjama is coloured in black. Also, it has pockets on both sides.",
     original_price: "899",
@@ -356,6 +375,7 @@ export const products = [
     image:
       "https://image.clovia.com/media/clovia-images/images/400x600/clovia-picture-cotton-rich-pyjama-1-729815.jpg",
     category: "Loungewear",
+    brand: "evolove",
     fabric: "cotton",
     color: "black",
     new_arrivals: true,
@@ -364,7 +384,7 @@ export const products = [
   },
   {
     _id: uuid(),
-    title: "Fish Print Top in Sky Blue & Pyjama in Maroon",
+    title: "Fish Print Top & Pyjama",
     description:
       "Top & pyjama set crafted with soft & premium 100% cotton fabric. Sky blue top designed with fish print at the chest. Has a round neckline with 3/4th sleeves. Maroon pyjama designed with fish print all over. Has an elasticated waistband for snug fit. Pockets on both sides.",
     original_price: "3749",
@@ -374,6 +394,7 @@ export const products = [
     image:
       "https://image.clovia.com/media/clovia-images/images/400x600/clovia-picture-ls0680a08-624984.jpg",
     category: "Nightsuit",
+    brand: "Berrylush",
     fabric: "cotton",
     color: "blue",
     new_arrivals: true,
@@ -382,7 +403,7 @@ export const products = [
   },
   {
     _id: uuid(),
-    title: "Animal Print Top & Capri Set in Olive Green",
+    title: "Animal Print Top & Capri Set",
     description:
       "Olive green top & capri set crafted with soft rayon fabric. Designed with animal print all over. Top has a round neck & short sleeves with frilled edges. Matching pyjama with frilled hems. Has an elasticated waistband for snug fit. Pockets on both sides.",
     original_price: "3249",
@@ -392,6 +413,7 @@ export const products = [
     image:
       "https://image.clovia.com/media/clovia-images/images/400x600/clovia-picture-ls0696p17-542461.jpg",
     category: "Nightsuit",
+    brand: "evolove",
     fabric: "rayon",
     color: "green",
     new_arrivals: false,
@@ -400,16 +422,17 @@ export const products = [
   },
   {
     _id: uuid(),
-    title: "Print Me Pretty Button Down Shirt & Pyjama Set in Pink",
+    title: "Print Me Pretty Button Down Shirt & Pyjama Set",
     description:
       "Lilac button down shirt & pyjama set crafted with premium 100% cotton fabric. Designed with bee & rainbow print all over. Shirt has 3/4th sleeves & a full button placket. Matching pyjama with soft elastic at the waistband & drawstring fastening for a snug fit. Pockets on both sides.",
     original_price: "4099",
     price: "932",
     rating: "3.1",
-    sizesAvailable: ["S", "M", "L", "3XL"],
+    sizesAvailable: [],
     image:
       "https://image.clovia.com/media/clovia-images/images/400x600/clovia-picture-print-me-pretty-button-down-shirt-pyjama-set-in-lilac-100-cotton-188179.jpg",
     category: "Nightsuit",
+    brand: "Dreamz",
     fabric: "cotton",
     color: "pink",
     new_arrivals: false,
@@ -418,7 +441,7 @@ export const products = [
   },
   {
     _id: uuid(),
-    title: "Graphic & Text Print Top in Yellow & Chic Basic Joggers in Purple",
+    title: "Graphic & Text Print Top & Chic Basic Joggers",
     description:
       "Top & pyjama set crafted with soft & premium 100% cotton fabric. Yellow top designed with graphic & text print at the front. Has a round neckline with contrast piping & 3/4th sleeves. Purple joggers with elasticated waistband & drawstring fastening for a snug fit. Pockets on both sides.",
     original_price: "3699",
@@ -428,6 +451,7 @@ export const products = [
     image:
       "https://image.clovia.com/media/clovia-images/images/400x600/clovia-picture-ls0581p07-279215.jpg",
     category: "Nightsuit",
+    brand: "Kryptic",
     fabric: "cotton",
     color: "yellow",
     new_arrivals: false,
@@ -436,7 +460,7 @@ export const products = [
   },
   {
     _id: uuid(),
-    title: "Print Me Pretty Top in Sky Blue & Chic Basic Shorts in Baby Pink",
+    title: "Print Me Pretty Top & Chic Basic Shorts",
     description:
       "Top & shorts set crafted with soft & premium 100% cotton fabric. Baby blue top designed with duck & text print at the front. Has a round neckline & 3/4th sleeves. Baby pink shorts with elasticated waistband & drawstring fastening for a snug fit. Pockets on both sides.",
     original_price: "2949",
@@ -446,6 +470,7 @@ export const products = [
     image:
       "https://image.clovia.com/media/clovia-images/images/400x600/clovia-picture-print-me-pretty-top-in-baby-blue-chic-basic-shorts-in-baby-pink-100-cotton-909764.jpg",
     category: "Nightsuit",
+    brand: "FashionRack",
     fabric: "cotton",
     color: "blue",
     new_arrivals: false,
@@ -454,7 +479,7 @@ export const products = [
   },
   {
     _id: uuid(),
-    title: "Butterfly Print Top & Shorts Set in Yellow",
+    title: "Butterfly Print Top & Shorts Set",
     description:
       "Yellow top & shorts set crafted with soft & premium 100% cotton fabric. Top has round neck & short sleeves with lettuce hem edges. Designed with butterfly print on one side. Matching shorts with elasticated waistband for a snug fit. Designed with butterfly print all over & has lettuce hemline. Pockets on both sides.",
     original_price: "2499",
@@ -464,6 +489,7 @@ export const products = [
     image:
       "https://image.clovia.com/media/clovia-images/images/400x600/clovia-picture-ls0555a02-397620.jpg",
     category: "Nightsuit",
+    brand: "Kanvin",
     fabric: "cotton",
     color: "yellow",
     new_arrivals: false,
@@ -472,16 +498,17 @@ export const products = [
   },
   {
     _id: uuid(),
-    title: "Dot Print Button Down Shirt & Pyjama Set in Baby Pink",
+    title: "Dot Print Button Down Shirt & Pyjama Set",
     description:
       "Baby pink button down shirt & pyjama set crafted with soft & premium 100% fabric. Designed with multicolour dot print all over. Has a full button placket & short sleeves. Matching pyjama with elasticated waistband for a snug fit. Pockets on both sides.",
     original_price: "4099",
     price: "932",
     rating: "3.5",
-    sizesAvailable: ["S", "XL", "3XL"],
+    sizesAvailable: [],
     image:
       "https://image.clovia.com/media/clovia-images/images/400x600/clovia-picture-ls0645d22-106857.jpg",
     category: "Nightsuit",
+    brand: "ETC",
     fabric: "cotton",
     color: "pink",
     new_arrivals: false,
@@ -490,7 +517,7 @@ export const products = [
   },
   {
     _id: uuid(),
-    title: "Heart Print Cami Top & Shorts Set in White",
+    title: "Heart Print Cami Top & Shorts Set",
     description:
       "White cami top & shorts set crafted with premium 100% cotton fabric. Designed with heart print all over. Top has round neckline. Has scalloped lace along the neckline & under the armholes. Has adjustable black spaghetti straps. Matching shorts has an elasticated waistband for snug fit. Has scalloped lace on the hemline. Pockets on both sides.",
     original_price: "2499",
@@ -500,6 +527,7 @@ export const products = [
     image:
       "https://image.clovia.com/media/clovia-images/images/400x600/clovia-picture-ls0516g18-168815.jpg",
     category: "Nightsuit",
+    brand: "Kanvin",
     fabric: "cotton",
     color: "white",
     new_arrivals: true,
@@ -508,7 +536,7 @@ export const products = [
   },
   {
     _id: uuid(),
-    title: "Pretty Florals Long Nighty in Maroon",
+    title: "Pretty Florals Long Nighty",
     description:
       "Maroon long nightdress crafted with soft cotton rich fabric. Designed with white & green floral print. Has a round neck with a short button placket. Designed with 3/4 sleeves and a ruffled bottom.",
     original_price: "2099",
@@ -518,6 +546,7 @@ export const products = [
     image:
       "https://image.clovia.com/media/clovia-images/images/400x600/clovia-picture-ns1359p09-444585.jpg",
     category: "Nightdress",
+    brand: "FashionRack",
     fabric: "cotton",
     color: "maroon",
     new_arrivals: true,
@@ -526,7 +555,7 @@ export const products = [
   },
   {
     _id: uuid(),
-    title: "Leaf Print Long Kaftan in Black",
+    title: "Leaf Print Long Kaftan",
     description:
       "Black kaftan crafted with smooth crepe fabric. Designed with red leaf print all over. Has an elasticated underbust with tie-ups for a comfy snug fit. Has a V-neckline & short sleeves.",
     original_price: "1899",
@@ -536,6 +565,7 @@ export const products = [
     image:
       "https://image.clovia.com/media/clovia-images/images/400x600/clovia-picture-ns0865e13-868120.jpg",
     category: "Nightdress",
+    brand: "Kryptic",
     fabric: "crepe",
     color: "black",
     new_arrivals: true,
@@ -544,7 +574,7 @@ export const products = [
   },
   {
     _id: uuid(),
-    title: "Pretty Florals Short Night Dress in Grey",
+    title: "Pretty Florals Short Night Dress",
     description:
       "Grey short night dress crafted with soft & premium 100% cotton fabric. Has a round neck and short sleeves with ruffled hems. Designed with white & peach floral print all over. Has pockets on both sides.",
     original_price: "999",
@@ -554,6 +584,7 @@ export const products = [
     image:
       "https://image.clovia.com/media/clovia-images/images/400x600/clovia-picture-pretty-florals-short-nightdress-in-grey-100-cotton-947912.jpg",
     category: "Nightdress",
+    brand: "Dreamz",
     fabric: "cotton",
     color: "grey",
     new_arrivals: false,
@@ -562,16 +593,17 @@ export const products = [
   },
   {
     _id: uuid(),
-    title: "Tie-Dye Print Short Night Dress in Multicolour",
+    title: "Tie-Dye Print Short Night Dress",
     description:
       "Multicolour short nightdress crafted with soft & premium 100% cotton fabric. Designed with blue, pink & yellow tie-dye print all over. Has deep U-neckine, adjustable shoulder straps & tie-up waistbelt. Pockets on both sides.",
     original_price: "1199",
     price: "999",
     rating: "3.1",
-    sizesAvailable: ["S", "XL", "3XL"],
+    sizesAvailable: [],
     image:
       "https://image.clovia.com/media/clovia-images/images/400x600/clovia-picture-tie-dye-print-short-night-dress-in-multicolour-100-cotton-274925.jpg",
     category: "Nightdress",
+    brand: "evolove",
     fabric: "cotton",
     color: "multi",
     new_arrivals: false,
@@ -580,7 +612,7 @@ export const products = [
   },
   {
     _id: uuid(),
-    title: "Giraffe Print Short Night Dress in Sky Blue",
+    title: "Giraffe Print Short Night Dress",
     description:
       "Sky blue short night dress crafted with soft & premium 100% cotton fabric. Designed with giraffe print all over. Has a round neckline, short button placket & a chest pocket. Racerback for added appeal. Pocket on both sides.",
     original_price: "1899",
@@ -590,6 +622,7 @@ export const products = [
     image:
       "https://image.clovia.com/media/clovia-images/images/400x600/clovia-picture-giraffe-print-short-night-dress-in-sky-blue-100-cotton-893875.jpg",
     category: "Nightdress",
+    brand: "Berrylush",
     fabric: "cotton",
     color: "blue",
     new_arrivals: false,
@@ -598,7 +631,7 @@ export const products = [
   },
   {
     _id: uuid(),
-    title: "Chic Basic Short Nighty & Cactus Print Robe Set in White",
+    title: "Chic Basic Short Nighty & Cactus Print Robe Set",
     description:
       "White robe & baby pink short nighty set crafted with luxurious satin fabric. Short nighty has V-neckline & armhole embellished with lace. Has spaghetti straps & ruching under the bust. The robe has a pink tie-up belt at the waistline & 3/4th sleeves. Designed with green cactus print.",
     original_price: "1699",
@@ -608,6 +641,7 @@ export const products = [
     image:
       "https://image.clovia.com/media/clovia-images/images/400x600/clovia-picture-ns1145r18-905361.jpg",
     category: "Nightdress",
+    brand: "evolove",
     fabric: "satin",
     color: "white",
     new_arrivals: true,
@@ -616,7 +650,7 @@ export const products = [
   },
   {
     _id: uuid(),
-    title: "Pretty Florals Robe in Rust Brown",
+    title: "Pretty Florals Robe",
     description:
       "Rust brown robe crafted with luxurious satin fabric. Has 3/4th floral print sleeves & upper half back. Comes with a matching floral print fabric belt.",
     original_price: "1199",
@@ -626,6 +660,7 @@ export const products = [
     image:
       "https://image.clovia.com/media/clovia-images/images/400x600/clovia-picture-chic-basic-robe-short-nighty-set-in-rust-brown-satin-896300.jpg",
     category: "Nightdress",
+    brand: "Dreamz",
     fabric: "satin",
     color: "brown",
     new_arrivals: true,
