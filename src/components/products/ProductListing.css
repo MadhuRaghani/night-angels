@@ -113,7 +113,8 @@
   top: 0;
   /* left: 0; */
   right: 0;
-  font-size: xx-small;
+  /* font-size: xx-small; */
+  padding: 0.2rem;
   background-color: var(--primary-color);
   color: var(--white-color);
   border-radius: 0.2rem;
@@ -132,8 +133,7 @@
   z-index: 99;
   bottom: 0.2rem;
   right: 0;
-  padding: 0.2rem;
-  font-size: smaller;
+  padding: 0.4rem;
   background-color: var(--primary-color);
   color: var(--white-color);
   border-radius: 0.2rem;
@@ -158,13 +158,12 @@
 
 .product-brand {
   font-weight: bold;
+  font-size: medium;
 }
 
 .product-title {
-  font-size: x-small;
   color: var(--gray-color);
   white-space: nowrap;
-  /* width: 50px;  */
   overflow: hidden;
   text-overflow: ellipsis;
 }
@@ -172,7 +171,12 @@
 .price-and-discount-div {
   display: flex;
   justify-content: space-between;
-  font-size: smaller;
+  font-size: medium;
+}
+
+.price-div {
+  display: flex;
+  gap: 0.5rem;
 }
 
 .product-original-price {
@@ -189,6 +193,7 @@
   color: red;
   font-weight: lighter;
   font-weight: 200;
+  padding-right: 0.2rem;
 }
 
 .add-to-cart-btn-div {
@@ -199,6 +204,7 @@
 
 .add-to-cart-btn {
   width: 100%;
+  font-size: medium;
   background-color: var(--primary-color);
   color: var(--white-color);
   border-radius: 0.2rem;
@@ -208,6 +214,7 @@
 
 .out-of-stock-label {
   width: 100%;
+  font-size: medium;
   justify-content: center;
   background-color: var(--gray-color);
   color: var(--white-color);
