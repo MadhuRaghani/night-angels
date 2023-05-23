@@ -5,6 +5,7 @@ import {
   AiOutlineShoppingCart,
   AiOutlineHeart,
   AiOutlineStar,
+  // AiFillHeart,
 } from "react-icons/ai";
 
 const ProductCard = ({ product }) => {
@@ -46,7 +47,7 @@ const ProductCard = ({ product }) => {
           <AiOutlineHeart className="cursor-pointer" />
         </div> */}
         <div className="ratings-reviews-div">
-          <span>
+          <span className="ratings-reviews-span">
             <AiOutlineStar size={14} />
             {rating} | {reviews}
           </span>
@@ -76,6 +77,7 @@ const ProductCard = ({ product }) => {
           <span className="out-of-stock-label">Out Of Stock</span>
         )}
         <AiOutlineHeart size={42} className="cursor-pointer" />
+        {/* <AiFillHeart size={42} color="#813772" className="cursor-pointer" /> */}
       </div>
     </div>
   );

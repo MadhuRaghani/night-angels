@@ -18,10 +18,14 @@
   /* flex-wrap: wrap; */
 }
 
+/* Filters */
+
 .filters {
   display: flex;
   flex-direction: column;
   flex-shrink: 0;
+  /* padding-right: 2rem; */
+  /* border-right: 0.2rem solid var(--primary-color); */
 }
 
 .filters-clear-div {
@@ -76,12 +80,15 @@
   margin-block-end: 0rem;
 }
 
+/* All Products Div */
+
 .all-products-div {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  /* gap: 1rem; */
 }
+
+/* Product Card */
 
 .product-card {
   width: 8rem;
@@ -130,6 +137,11 @@
   background-color: var(--primary-color);
   color: var(--white-color);
   border-radius: 0.2rem;
+}
+
+.ratings-reviews-span {
+  display: flex;
+  align-items: center;
 }
 
 .product-details-card-div {
