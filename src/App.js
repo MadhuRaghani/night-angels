@@ -9,6 +9,7 @@ import Footer from "./components/footer/Footer.js";
 import Wishlist from "./components/wishlist/Wishlist.js";
 import Cart from "./components/cart/Cart.js";
 import Navbar from "./components/navbar/Navbar";
+import { ToastContainer } from "react-toastify";
 
 function App() {
   return (
@@ -23,6 +24,18 @@ function App() {
         <Route path="/cart" element={<Cart />} />
         <Route path="/mockman" element={<Mockman />} />
       </Routes>
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+      />
       <Footer />
     </div>
   );

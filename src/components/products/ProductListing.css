@@ -86,12 +86,13 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  gap: 1rem;
 }
 
 /* Product Card */
 
 .product-card {
-  width: 8rem;
+  width: 16rem;
   font-size: smaller;
   border: 1px solid black;
   padding: 0.2rem;
@@ -100,7 +101,6 @@
 
 .image-card-div img {
   width: 100%;
-  height: 12rem;
 }
 
 .image-card-div {
@@ -207,6 +207,8 @@
 }
 
 .out-of-stock-label {
+  width: 100%;
+  justify-content: center;
   background-color: var(--gray-color);
   color: var(--white-color);
   padding: 0.2rem;
