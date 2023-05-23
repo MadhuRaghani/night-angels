@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import {
   AiOutlineHeart,
@@ -7,8 +7,11 @@ import {
   // AiOutlineSearch,
 } from "react-icons/ai";
 import "../navbar/Navbar.css";
+import { ProductsContext } from "../../contexts/ProductsContext";
 
 function Navbar() {
+  const { filtersDispatch } = useContext(ProductsContext);
+
   return (
     <div className="nav-bar">
       <nav className="nav-full">
@@ -23,6 +26,12 @@ function Navbar() {
               type="text"
               placeholder="Search"
               className="nav-search-input"
+              onChange={(event) => {
+                filtersDispatch({
+                  type: "SEARCH",
+                  payload: event.target.value,
+                });
+              }}
             />
           </label>
         </div>

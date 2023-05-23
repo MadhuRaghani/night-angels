@@ -81,6 +81,11 @@ const ProductCard = ({ product }) => {
         <AiOutlineHeart size={42} className="cursor-pointer" />
         {/* <AiFillHeart size={42} color="#813772" className="cursor-pointer" /> */}
       </div>
+      <div>
+        {sizesAvailable.map((size) => (
+          <span>{size}||</span>
+        ))}
+      </div>
     </div>
   );
 };

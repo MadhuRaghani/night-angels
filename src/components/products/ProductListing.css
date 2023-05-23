@@ -16,6 +16,7 @@
   font-family: "Wix Madefor Display", sans-serif;
   display: flex;
   /* flex-wrap: wrap; */
+  gap: 2rem;
 }
 
 /* Filters */
@@ -24,6 +25,7 @@
   display: flex;
   flex-direction: column;
   flex-shrink: 0;
+  padding-left: 0.5rem;
   /* padding-right: 2rem; */
   /* border-right: 0.2rem solid var(--primary-color); */
 }
@@ -94,9 +96,11 @@
 .product-card {
   width: 16rem;
   font-size: smaller;
-  border: 1px solid black;
+  box-shadow: var(--primary-color) 2px 7px 7px 0px;
   padding: 0.2rem;
   margin: 0.2rem;
+  /* height: 500px; */
+  height: fit-content;
 }
 
 .image-card-div img {
