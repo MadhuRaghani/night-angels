@@ -74,7 +74,7 @@ function Filters({ categories, sizes, stars }) {
       <div className="filters-categories-div">
         <p className="filters-p">Categories</p>
         {categories.map((category) => (
-          <div className="each-checkbox-and-p-div">
+          <div className="each-checkbox-and-p-div" key={category._id}>
             <input
               type="checkbox"
               className="cursor-pointer"
@@ -94,7 +94,7 @@ function Filters({ categories, sizes, stars }) {
       <div className="filters-sizes-div">
         <p className="filters-p">Sizes</p>
         {sizes.map((size) => (
-          <div className="each-checkbox-and-p-div">
+          <div className="each-checkbox-and-p-div" key={size}>
             <input
               type="checkbox"
               className="cursor-pointer"
@@ -114,7 +114,7 @@ function Filters({ categories, sizes, stars }) {
       <div className="filters-stars-div">
         <p className="filters-p">Stars</p>
         {stars.map((star) => (
-          <div className="each-checkbox-and-p-div">
+          <div className="each-checkbox-and-p-div" key={star}>
             <input
               type="radio"
               name="rating-radio-btn"

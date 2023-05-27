@@ -14,7 +14,7 @@ function Footer() {
             href="https://github.com/RaghaniMadhu"
             rel="noreferrer"
           >
-            <AiOutlineGithub size={42} />
+            <AiOutlineGithub size={28} />
           </a>
         </li>
         <li className="list-item-inline">
@@ -23,7 +23,7 @@ function Footer() {
             href="https://twitter.com/MadhuRaghani"
             rel="noreferrer"
           >
-            <RxTwitterLogo size={42} />
+            <RxTwitterLogo size={28} />
           </a>
         </li>
         <li className="list-item-inline">
@@ -32,7 +32,7 @@ function Footer() {
             href="https://www.linkedin.com/in/madhu-raghani-28541a132/"
             rel="noreferrer"
           >
-            <RxLinkedinLogo size={42} />
+            <RxLinkedinLogo size={28} />
           </a>
         </li>
       </ul>

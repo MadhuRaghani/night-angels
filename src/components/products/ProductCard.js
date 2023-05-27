@@ -1,12 +1,14 @@
 // import './ProductCard.css';
 // import { useState } from "react";
 // import { useLocation, useNavigate } from "react-router-dom";
+import { useContext } from "react";
 import {
   AiOutlineShoppingCart,
   AiOutlineHeart,
   AiOutlineStar,
   // AiFillHeart,
 } from "react-icons/ai";
+import { WishlistContext } from "../../contexts/WishlistContext";
 
 const ProductCard = ({ product }) => {
   // const navigate = useNavigate();
@@ -34,6 +36,8 @@ const ProductCard = ({ product }) => {
   const discount = Math.floor(
     ((original_price - price) / original_price) * 100
   );
+
+  const { addToWishlistHandler } = useContext(WishlistContext);
 
   return (
     <div className="product-card">
@@ -78,12 +82,18 @@ const ProductCard = ({ product }) => {
         ) : (
           <span className="out-of-stock-label">Out Of Stock</span>
         )}
-        <AiOutlineHeart size={42} className="cursor-pointer" />
+        <button
+          onClick={() => {
+            addToWishlistHandler(product);
+          }}
+        >
+          <AiOutlineHeart size={42} className="cursor-pointer" />
+        </button>
         {/* <AiFillHeart size={42} color="#813772" className="cursor-pointer" /> */}
       </div>
       <div>
         {sizesAvailable.map((size) => (
-          <span>{size}||</span>
+          <span key={size}>{size}||</span>
         ))}
       </div>
     </div>

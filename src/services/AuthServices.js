@@ -136,3 +136,11 @@ export const loginHandler = async (
     });
   }
 };
+
+export const logoutHandler = (setUser, setToken) => {
+  localStorage.removeItem("authenticationToken");
+  localStorage.removeItem("userDetails");
+  setToken(null);
+  setUser(null);
+  // delete cart and wishlist from context
+};

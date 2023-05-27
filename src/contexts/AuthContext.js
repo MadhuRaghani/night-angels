@@ -4,8 +4,8 @@ export const AuthContext = createContext();
 
 export default function AuthContextProvider({ children }) {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const [user, setUser] = useState({});
-  const [token, setToken] = useState("");
+  const [user, setUser] = useState();
+  const [token, setToken] = useState();
 
   return (
     <>

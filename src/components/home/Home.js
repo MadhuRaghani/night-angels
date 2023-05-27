@@ -24,6 +24,7 @@ function Home() {
       <div className="all-categories">
         {categories.map((category) => (
           <div
+            key={category._id}
             onClick={() => {
               filtersDispatch({
                 type: "CATEGORIES",

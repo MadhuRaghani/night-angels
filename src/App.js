@@ -11,6 +11,7 @@ import Cart from "./components/cart/Cart.js";
 import Navbar from "./components/navbar/Navbar";
 import { ToastContainer } from "react-toastify";
 import User from "./components/user/User";
+import PrivateRoute from "./components/privateRoute/PrivateRoute";
 
 function App() {
   return (
@@ -20,11 +21,39 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
-        <Route path="/user" element={<User />} />
         <Route path="/productlists" element={<ProductListing />} />
-        <Route path="/wishlist" element={<Wishlist />} />
-        <Route path="/cart" element={<Cart />} />
-        <Route path="/mockman" element={<Mockman />} />
+        <Route
+          path="/user"
+          element={
+            <PrivateRoute>
+              <User />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/wishlist"
+          element={
+            <PrivateRoute>
+              <Wishlist />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/cart"
+          element={
+            <PrivateRoute>
+              <Cart />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/mockman"
+          element={
+            <PrivateRoute>
+              <Mockman />
+            </PrivateRoute>
+          }
+        />
       </Routes>
       <ToastContainer
         position="top-right"
