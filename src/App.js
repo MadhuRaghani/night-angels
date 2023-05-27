@@ -10,6 +10,7 @@ import Wishlist from "./components/wishlist/Wishlist.js";
 import Cart from "./components/cart/Cart.js";
 import Navbar from "./components/navbar/Navbar";
 import { ToastContainer } from "react-toastify";
+import User from "./components/user/User";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
+        <Route path="/user" element={<User />} />
         <Route path="/productlists" element={<ProductListing />} />
         <Route path="/wishlist" element={<Wishlist />} />
         <Route path="/cart" element={<Cart />} />
@@ -31,7 +33,7 @@ function App() {
         newestOnTop={false}
         closeOnClick
         rtl={false}
-        pauseOnFocusLoss
+        // pauseOnFocusLoss
         draggable
         pauseOnHover
         theme="light"

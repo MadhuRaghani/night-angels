@@ -1,49 +1,45 @@
 import React, { useContext, useState } from "react";
 import { AuthContext } from "../../contexts/AuthContext";
-import axios from "axios";
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
-import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import { loginHandler } from "../../services/AuthServices";
 
 function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
-  const [error, setError] = useState({ hasError: false, errorMessage: "" });
-  const { setIsLoggedIn } = useContext(AuthContext);
-
-  const onsubmitHandler = async (e) => {
-    e.preventDefault();
-    try {
-      const response = await axios.post("/api/auth/login", { email, password });
-      localStorage.setItem("authenticationToken", response.data.encodedToken);
-      setIsLoggedIn(true);
-      setError({ hasError: false, errorMessage: "" });
-      setEmail("");
-      setPassword("");
-      console.log(response);
-      toast.success("SignUp Successful");
-      // localStorage.getItem("authenticationToken");
-      // navigate to page you came from
-    } catch (e) {
-      console.error(e);
-      const err = e.response.data.errors[0];
-      setError({
-        hasError: true,
-        errorMessage: err.includes("The email you entered is not Registered")
-          ? "Email Not Registered"
-          : err,
-      });
-    }
-  };
+  const [errorLogin, setErrorLogin] = useState({
+    hasError: false,
+    errorMessage: "",
+  });
+  const { setIsLoggedIn, setUser, setToken } = useContext(AuthContext);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   return (
     <div className="login-page">
       <div className="login-container">
         <h2>Login</h2>
         <div className="login-main">
-          <form onSubmit={onsubmitHandler} className="login-form">
+          <form
+            onSubmit={(e) => {
+              loginHandler(
+                e,
+                email,
+                password,
+                setIsLoggedIn,
+                setEmail,
+                setPassword,
+                setErrorLogin,
+                setUser,
+                setToken,
+                navigate,
+                location
+              );
+            }}
+            className="login-form"
+          >
             <div className="login-card">
               <label className="details-label" htmlFor="email">
                 Email:
@@ -87,8 +83,8 @@ function Login() {
           </p>
         </div>
         <div className="error-main">
-          {error.hasError && (
-            <span className="error-message">{error.errorMessage}</span>
+          {errorLogin.hasError && (
+            <span className="error-message">{errorLogin.errorMessage}</span>
           )}
         </div>
       </div>

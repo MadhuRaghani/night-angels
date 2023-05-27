@@ -1,11 +1,10 @@
-import axios from "axios";
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import React, { useContext, useState } from "react";
+import { useNavigate, Link, useLocation } from "react-router-dom";
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
-import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "../authentication/Auth.css";
-import { Link } from "react-router-dom";
+import { signUpHandler } from "../../services/AuthServices";
+import { AuthContext } from "../../contexts/AuthContext";
 
 function SignUp() {
   const [signUpData, setSignUpData] = useState({
@@ -17,56 +16,13 @@ function SignUp() {
   });
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
-  const [error, setError] = useState({ hasError: false, errorMessage: "" });
+  const [errorSignUp, setErrorSignup] = useState({
+    hasError: false,
+    errorMessage: "",
+  });
+  const { setIsLoggedIn, setUser, setToken } = useContext(AuthContext);
   const navigate = useNavigate();
-
-  const regexPassword =
-    /^(?=.*[0-9])(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z])[a-zA-Z0-9!@#$%^&*]{8,14}$/;
-  const regexEmail = /^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[A-Za-z]+$/;
-
-  const validateRegex = (value, regex) => regex.test(value);
-
-  const signUpHandler = async (e) => {
-    e.preventDefault();
-    try {
-      if (!validateRegex(signUpData.password, regexPassword)) {
-        setError({
-          hasError: true,
-          errorMessage:
-            "Password should be 8 to 14 characters long and should have a digit, a special character, one uppercase and one lowercase letter",
-        });
-      } else if (!validateRegex(signUpData.email, regexEmail)) {
-        setError({
-          hasError: true,
-          errorMessage: "Please enter a valid email",
-        });
-      } else if (signUpData.password !== signUpData.confirmPassword) {
-        setError({
-          hasError: true,
-          errorMessage: "Password and Confirm Password Should Match",
-        });
-        setSignUpData((prev) => ({
-          ...prev,
-          password: "",
-          confirmPassword: "",
-        }));
-      } else {
-        const response = await axios.post("/api/auth/signup", {
-          ...signUpData,
-        });
-        console.log(response);
-        if (response.status === 201) {
-          toast.success("SignUp Successful");
-          navigate("/login");
-        }
-      }
-    } catch (e) {
-      const err = e.response.data.errors[0];
-      err.includes("Email Already Exists")
-        ? setError("Account Already exists.")
-        : setError(err);
-    }
-  };
+  const location = useLocation();
 
   return (
     <div className="login-page">
@@ -74,7 +30,19 @@ function SignUp() {
         <h2>Sign Up</h2>
         <div className="login-main">
           <form
-            onSubmit={signUpHandler}
+            onSubmit={(e) => {
+              signUpHandler(
+                e,
+                signUpData,
+                setSignUpData,
+                setErrorSignup,
+                navigate,
+                setIsLoggedIn,
+                setUser,
+                setToken,
+                location
+              );
+            }}
             autoComplete="off"
             className="login-form"
           >
@@ -200,8 +168,8 @@ function SignUp() {
           </p>
         </div>
         <div className="error-main">
-          {error.hasError && (
-            <span className="error-message">{error.errorMessage}</span>
+          {errorSignUp.hasError && (
+            <span className="error-message">{errorSignUp.errorMessage}</span>
           )}
         </div>
       </div>

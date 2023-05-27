@@ -39,7 +39,7 @@ function Navbar() {
           <Link className="link" to="/productlists">
             Explore
           </Link>
-          <Link className="link" to="/">
+          <Link className="link" to="/user">
             <AiOutlineUser size={28} />
           </Link>
           <Link className="link" to="/wishlist">

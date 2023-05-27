@@ -60,7 +60,7 @@ export default function ProductsContextProvider({ children }) {
           )
       : selectedPriceProducts;
 
-  console.log(filters);
+  // console.log(filters);
 
   useEffect(() => {
     (async () => {
