@@ -8,9 +8,11 @@ import {
 } from "react-icons/ai";
 import "../navbar/Navbar.css";
 import { ProductsContext } from "../../contexts/ProductsContext";
+import { AuthContext } from "../../contexts/AuthContext";
 
 function Navbar() {
   const { filtersDispatch } = useContext(ProductsContext);
+  const { isLoggedIn } = useContext(AuthContext);
 
   return (
     <div className="nav-bar">
@@ -39,7 +41,7 @@ function Navbar() {
           <Link className="link" to="/productlists">
             Explore
           </Link>
-          <Link className="link" to="/user">
+          <Link className="link" to={isLoggedIn ? "/user" : "/login"}>
             <AiOutlineUser size={28} />
           </Link>
           <Link className="link" to="/wishlist">

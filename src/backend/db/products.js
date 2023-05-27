@@ -1,4 +1,4 @@
-import { v4 as uuid } from "uuid";
+// import { v4 as uuid } from "uuid";
 
 export const products = [
   // {
@@ -21,7 +21,7 @@ export const products = [
   //   delivery_time: "2",
   // },
   {
-    _id: uuid(),
+    _id: "49fbdba9-47e3-4704-adf7-73ada955fb2d",
     title: "Tank Top",
     description:
       "Team this white-coloured tank top with a pair of comfy jeans and sneakers and your stylish look is complete. Made with cotton fabric, it is soft and comfortable to wear. Additionally, this sleeveless tank top has a round neckline and a racerback. This tank top features four-way stretchable fabric that is crease-free and doesn’t roll up. This fabric has a high degree of flexibility, which makes this top ideal for workouts. You can also use this tank top as a layering canvas over a shrug of your choice.",
@@ -40,7 +40,7 @@ export const products = [
     delivery_time: "3",
   },
   {
-    _id: uuid(),
+    _id: "94aa649e-8c60-412a-88ce-04e1af7ef826",
     title: "Quirky Text Top",
     description:
       "Dark pink T-shirt crafted with 100% cotton fabric.Designed with quirky text print on the chest.Has a round neckline and short sleeves.",
@@ -59,7 +59,7 @@ export const products = [
     delivery_time: "2",
   },
   {
-    _id: uuid(),
+    _id: "8e0218ab-5bb8-4597-86cc-714fbcd15daf",
     title: "Music Magic Top",
     description:
       "Dark pink T-shirt crafted with 100% cotton fabric. Designed with cool headphone and text print at the chest. Has a round neckline and short sleeves.",
@@ -78,7 +78,7 @@ export const products = [
     delivery_time: "2",
   },
   {
-    _id: uuid(),
+    _id: "4547f17a-2caf-44c4-bca7-4a4361ca6db3",
     title: "Chic Basic Top",
     description:
       "Black top crafted with soft cotton rich fabric. Designed with round neck & short sleeves.",
@@ -97,7 +97,7 @@ export const products = [
     delivery_time: "3",
   },
   {
-    _id: uuid(),
+    _id: "c19b1521-6763-4145-ba44-6049210c786c",
     title: "But First Coffee Top",
     description:
       "Light grey printed top crafted with premium cotton fabric. Designed wtih round neckline and short sleeves.",
@@ -116,7 +116,7 @@ export const products = [
     delivery_time: "3",
   },
   {
-    _id: uuid(),
+    _id: "e5052a2d-c475-4e93-9278-df8cbc27ad3b",
     title: "Chic Basic Pyjama",
     description:
       "Blue pyjama crafted with soft crepe fabric. Elasticated waistband & pockets on both sides.",
@@ -135,7 +135,7 @@ export const products = [
     delivery_time: "3",
   },
   {
-    _id: uuid(),
+    _id: "b66ff66d-a808-4707-8a49-0faba0ce2ce6",
     title: "Pretty Florals Pyjama",
     description:
       "Multicolour pyjama crafted with soft velour fabric. Designed with floral print all over. Has an elasticated waistband for snug fit. Pockets on both sides.",
@@ -155,7 +155,7 @@ export const products = [
     delivery_time: "3",
   },
   {
-    _id: uuid(),
+    _id: "76d5a05e-50ad-46ab-b8e8-44f791989a12",
     title: "Chic Basic Cuffed Joggers",
     description:
       "Light grey joggers crafted with super-soft loop knit fleece fabric. Has an elasticated waistband with a fastening drawstring. Cuffed leg openings for comfort fit. Has pockets on both sides.",
@@ -174,7 +174,7 @@ export const products = [
     delivery_time: "3",
   },
   {
-    _id: uuid(),
+    _id: "1cd4ecde-5254-4d9b-a697-30ad305b93f4",
     title: "Chic Basic Wide Leg Pants",
     description:
       "Maroon wide leg pants crafted with soft rayon fabric. Has a button closure & loops at the waist. Pockets on both sides.",
@@ -193,7 +193,7 @@ export const products = [
     delivery_time: "3",
   },
   {
-    _id: uuid(),
+    _id: "7545e7be-112a-4c4a-910f-699222c6adf9",
     title: "Print Me Pretty Boxer Shorts",
     description:
       "White boxer shorts crafted with soft 100% cotton fabric. Designed with heart print all over. Has an elasticated waist for a snug fit. Has pockets on each side.",
@@ -212,7 +212,7 @@ export const products = [
     delivery_time: "3",
   },
   {
-    _id: uuid(),
+    _id: "21d2a99e-eda8-494c-9be0-a13d095cd7a3",
     title: "Sassy Stripes Boxer Shorts",
     description:
       "White & black striped boxer shorts crafted with soft & premium 100% cotton fabric. Has an elasticated waist for a snug fit. Pockets on each side.",
@@ -231,7 +231,7 @@ export const products = [
     delivery_time: "3",
   },
   {
-    _id: uuid(),
+    _id: "30f62f25-55b1-444a-9399-fabac8501bb0",
     title: "Print Me Pretty Pyjama",
     description:
       "Red pyjama crafted with soft rayon fabric. Designed with triangle print all over. Elasticated waistband for a snug fit. Pockets on both sides.",
@@ -250,7 +250,7 @@ export const products = [
     delivery_time: "3",
   },
   {
-    _id: uuid(),
+    _id: "a4bca814-043a-40b7-ac20-1cc27195dbef",
     title: "Print Me Pretty Kaftan Top & Pyjama",
     description:
       "Sky blue printed kaftan top & pyjama set crafted with soft & premium 100% cotton fabric. Kaftan top has a V-neckine & short sleeves. Has an elasticated underbust with tie-up detail. Matching pyjama has an elasticated waistband for snug fit. Pockets on both side.",
@@ -269,7 +269,7 @@ export const products = [
     delivery_time: "3",
   },
   {
-    _id: uuid(),
+    _id: "864430f0-55b5-4c4d-8a15-1bad153b0d52",
     title: "Chic Basic Button Down Shirt & Pyjama Set",
     description:
       "Soft pink button down shirt & pyjama set crafted with soft cotton modal fabric. Shirt with full button placket & short sleeves. Has frilled edges at the sleeves & hemline. Matching pyjama with elasticated waistband & drawstring fastening for a snug fit. Pockets on both sides.",
@@ -288,7 +288,7 @@ export const products = [
     delivery_time: "3",
   },
   {
-    _id: uuid(),
+    _id: "ace24314-bfa6-498c-abd5-d30c709deccb",
     title: "Chic Basic Top & Pyjama Set",
     description:
       "Baby pink top and pyjama set crafted with soft & cosy velour fabric. Top has a round neck & full sleeves with elasticated cuffs. Matching pyjama with soft elastic at the waistband. Pockets on both sides.",
@@ -307,7 +307,7 @@ export const products = [
     delivery_time: "4",
   },
   {
-    _id: uuid(),
+    _id: "30f5597c-db4c-4491-8b43-cf5324ab8cc0",
     title: "Chic Basic Top, Pyjama & Shrug Set",
     description:
       "Black top, pyjama & shrug set crafted with soft & cosy velour fabric. Cami top with a round neck. Comes with a matching shrug that has full sleeves. Pyjama with an elasticated waistband for a snug fit. Has pockets on both sides.",
@@ -326,7 +326,7 @@ export const products = [
     delivery_time: "3",
   },
   {
-    _id: uuid(),
+    _id: "dbb61999-8b90-4ed4-8167-d42aaa959198",
     title: "Chic Basic Button Down Shirt & Pyjama Set",
     description:
       "Dusky pink button-down shirt & pyjama set crafted with smooth rayon fabric. Has a full button placket & 3/4 sleeves. Matching pyjama with elasticated waistband for snug fit. Pockets on both sides.",
@@ -345,7 +345,7 @@ export const products = [
     delivery_time: "3",
   },
   {
-    _id: uuid(),
+    _id: "f7e9de6f-c5ba-44fc-86aa-ab28e041f5c8",
     title: "Sassy Stripes 3 Piece Set- Top, Pyjama & Robe",
     description:
       "Top, pyjama, and robe set crafted with rayon fabric. Maroon striped top designed with a round neck and 3/4 sleeves. Matching pyjama with an elasticated waistband for a snug fit. Pockets on both sides. Comes with a stylish robe with 3/4 sleeves and tie-ups.",
@@ -364,7 +364,7 @@ export const products = [
     delivery_time: "3",
   },
   {
-    _id: uuid(),
+    _id: "035d9622-cd63-4dc6-8225-9648aa66e231",
     title: "Cotton Rich Pyjama",
     description:
       "Made using the soft and breathable rich-cotton fabric for maximum ease and comfort all day long, this stylish pyjama comes with soft and flexible elastic band at the waistline to avoid slide down and provide a better and comfortable fit. Its fabric gives a smooth feel on the skin. The pyjama is coloured in black. Also, it has pockets on both sides.",
@@ -383,7 +383,7 @@ export const products = [
     delivery_time: "3",
   },
   {
-    _id: uuid(),
+    _id: "6aa6fb71-0a35-4924-bcec-f3940fff109e",
     title: "Fish Print Top & Pyjama",
     description:
       "Top & pyjama set crafted with soft & premium 100% cotton fabric. Sky blue top designed with fish print at the chest. Has a round neckline with 3/4th sleeves. Maroon pyjama designed with fish print all over. Has an elasticated waistband for snug fit. Pockets on both sides.",
@@ -402,7 +402,7 @@ export const products = [
     delivery_time: "3",
   },
   {
-    _id: uuid(),
+    _id: "6596a60c-2468-4555-a9f7-64d5572d88f6",
     title: "Animal Print Top & Capri Set",
     description:
       "Olive green top & capri set crafted with soft rayon fabric. Designed with animal print all over. Top has a round neck & short sleeves with frilled edges. Matching pyjama with frilled hems. Has an elasticated waistband for snug fit. Pockets on both sides.",
@@ -421,7 +421,7 @@ export const products = [
     delivery_time: "3",
   },
   {
-    _id: uuid(),
+    _id: "d8a5241e-263f-46d1-8183-38b2521d798b",
     title: "Print Me Pretty Button Down Shirt & Pyjama Set",
     description:
       "Lilac button down shirt & pyjama set crafted with premium 100% cotton fabric. Designed with bee & rainbow print all over. Shirt has 3/4th sleeves & a full button placket. Matching pyjama with soft elastic at the waistband & drawstring fastening for a snug fit. Pockets on both sides.",
@@ -440,7 +440,7 @@ export const products = [
     delivery_time: "3",
   },
   {
-    _id: uuid(),
+    _id: "9ab6d932-9535-4365-a0ad-d81fa7dabf0f",
     title: "Graphic & Text Print Top & Chic Basic Joggers",
     description:
       "Top & pyjama set crafted with soft & premium 100% cotton fabric. Yellow top designed with graphic & text print at the front. Has a round neckline with contrast piping & 3/4th sleeves. Purple joggers with elasticated waistband & drawstring fastening for a snug fit. Pockets on both sides.",
@@ -459,7 +459,7 @@ export const products = [
     delivery_time: "3",
   },
   {
-    _id: uuid(),
+    _id: "64c19dd5-fb13-48e5-b510-fd454a62ff00",
     title: "Print Me Pretty Top & Chic Basic Shorts",
     description:
       "Top & shorts set crafted with soft & premium 100% cotton fabric. Baby blue top designed with duck & text print at the front. Has a round neckline & 3/4th sleeves. Baby pink shorts with elasticated waistband & drawstring fastening for a snug fit. Pockets on both sides.",
@@ -478,7 +478,7 @@ export const products = [
     delivery_time: "3",
   },
   {
-    _id: uuid(),
+    _id: "0acb7d32-99e4-489f-88bd-e8bec7d3e043",
     title: "Butterfly Print Top & Shorts Set",
     description:
       "Yellow top & shorts set crafted with soft & premium 100% cotton fabric. Top has round neck & short sleeves with lettuce hem edges. Designed with butterfly print on one side. Matching shorts with elasticated waistband for a snug fit. Designed with butterfly print all over & has lettuce hemline. Pockets on both sides.",
@@ -497,7 +497,7 @@ export const products = [
     delivery_time: "3",
   },
   {
-    _id: uuid(),
+    _id: "23bf9fce-2631-4577-a753-00d744ffaff4",
     title: "Dot Print Button Down Shirt & Pyjama Set",
     description:
       "Baby pink button down shirt & pyjama set crafted with soft & premium 100% fabric. Designed with multicolour dot print all over. Has a full button placket & short sleeves. Matching pyjama with elasticated waistband for a snug fit. Pockets on both sides.",
@@ -516,7 +516,7 @@ export const products = [
     delivery_time: "2",
   },
   {
-    _id: uuid(),
+    _id: "a4a78b34-cab0-4d4b-9a06-a952c18da59b",
     title: "Heart Print Cami Top & Shorts Set",
     description:
       "White cami top & shorts set crafted with premium 100% cotton fabric. Designed with heart print all over. Top has round neckline. Has scalloped lace along the neckline & under the armholes. Has adjustable black spaghetti straps. Matching shorts has an elasticated waistband for snug fit. Has scalloped lace on the hemline. Pockets on both sides.",
@@ -535,7 +535,7 @@ export const products = [
     delivery_time: "3",
   },
   {
-    _id: uuid(),
+    _id: "4e7a678c-22be-4f8c-b741-474abfdb7820",
     title: "Pretty Florals Long Nighty",
     description:
       "Maroon long nightdress crafted with soft cotton rich fabric. Designed with white & green floral print. Has a round neck with a short button placket. Designed with 3/4 sleeves and a ruffled bottom.",
@@ -554,7 +554,7 @@ export const products = [
     delivery_time: "3",
   },
   {
-    _id: uuid(),
+    _id: "caf0075a-10a5-4e39-8775-c71f0e8168db",
     title: "Leaf Print Long Kaftan",
     description:
       "Black kaftan crafted with smooth crepe fabric. Designed with red leaf print all over. Has an elasticated underbust with tie-ups for a comfy snug fit. Has a V-neckline & short sleeves.",
@@ -573,7 +573,7 @@ export const products = [
     delivery_time: "3",
   },
   {
-    _id: uuid(),
+    _id: "1632cee9-f7ee-4018-a7a6-0d180ba3baa0",
     title: "Pretty Florals Short Night Dress",
     description:
       "Grey short night dress crafted with soft & premium 100% cotton fabric. Has a round neck and short sleeves with ruffled hems. Designed with white & peach floral print all over. Has pockets on both sides.",
@@ -592,7 +592,7 @@ export const products = [
     delivery_time: "3",
   },
   {
-    _id: uuid(),
+    _id: "9fa1f471-6c82-4fbd-bd58-4f4d50edb40c",
     title: "Tie-Dye Print Short Night Dress",
     description:
       "Multicolour short nightdress crafted with soft & premium 100% cotton fabric. Designed with blue, pink & yellow tie-dye print all over. Has deep U-neckine, adjustable shoulder straps & tie-up waistbelt. Pockets on both sides.",
@@ -611,7 +611,7 @@ export const products = [
     delivery_time: "3",
   },
   {
-    _id: uuid(),
+    _id: "900a4f22-65fe-42dc-ae9b-953205e3110b",
     title: "Giraffe Print Short Night Dress",
     description:
       "Sky blue short night dress crafted with soft & premium 100% cotton fabric. Designed with giraffe print all over. Has a round neckline, short button placket & a chest pocket. Racerback for added appeal. Pocket on both sides.",
@@ -630,7 +630,7 @@ export const products = [
     delivery_time: "3",
   },
   {
-    _id: uuid(),
+    _id: "880ab335-36bc-4e47-94ad-2ae3da9a2ebe",
     title: "Chic Basic Short Nighty & Cactus Print Robe Set",
     description:
       "White robe & baby pink short nighty set crafted with luxurious satin fabric. Short nighty has V-neckline & armhole embellished with lace. Has spaghetti straps & ruching under the bust. The robe has a pink tie-up belt at the waistline & 3/4th sleeves. Designed with green cactus print.",
@@ -649,7 +649,7 @@ export const products = [
     delivery_time: "3",
   },
   {
-    _id: uuid(),
+    _id: "b141ad3c-9a4c-4144-9687-ed73fe3cd875",
     title: "Pretty Florals Robe",
     description:
       "Rust brown robe crafted with luxurious satin fabric. Has 3/4th floral print sleeves & upper half back. Comes with a matching floral print fabric belt.",

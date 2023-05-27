@@ -63,6 +63,7 @@ export const signUpHandler = async (
         setIsLoggedIn(true);
         setUser(response.data.createdUser);
         setToken(response.data.encodedToken);
+        toast.success("Login Successful");
 
         // navigate to page you came from
         if (location?.state?.from) {
