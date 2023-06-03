@@ -137,10 +137,11 @@ export const loginHandler = async (
   }
 };
 
-export const logoutHandler = (setUser, setToken) => {
+export const logoutHandler = (setUser, setToken, clearWishlist) => {
   localStorage.removeItem("authenticationToken");
   localStorage.removeItem("userDetails");
   setToken(null);
   setUser(null);
+  clearWishlist();
   // delete cart and wishlist from context
 };

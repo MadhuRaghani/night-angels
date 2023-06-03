@@ -1,10 +1,11 @@
 import React, { useContext } from "react";
 import { AuthContext } from "../../contexts/AuthContext";
 import { logoutHandler } from "../../services/AuthServices";
+import { WishlistContext } from "../../contexts/WishlistContext";
 
 function User() {
   const { user, setUser, setToken } = useContext(AuthContext);
-  // const {}
+  const { clearWishlist } = useContext(WishlistContext);
 
   return (
     <div>
@@ -13,7 +14,7 @@ function User() {
       <p>Email: {user.email}</p>
       <button
         onClick={() => {
-          logoutHandler(setUser, setToken);
+          logoutHandler(setUser, setToken, clearWishlist);
         }}
       >
         Logout

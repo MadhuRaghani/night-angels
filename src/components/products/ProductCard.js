@@ -6,16 +6,18 @@ import {
   AiOutlineShoppingCart,
   AiOutlineHeart,
   AiOutlineStar,
-  // AiFillHeart,
+  AiFillHeart,
 } from "react-icons/ai";
 import { WishlistContext } from "../../contexts/WishlistContext";
+import { AuthContext } from "../../contexts/AuthContext";
+import { useNavigate } from "react-router-dom";
 
 const ProductCard = ({ product }) => {
   // const navigate = useNavigate();
   // const [cartbuttonDisabled, setcartDisable] = useState(false);
   // const [wishButtonDisabled, setWishDisable] = useState(false);
   const {
-    // _id,
+    _id,
     title,
     // description,
     original_price,
@@ -37,7 +39,14 @@ const ProductCard = ({ product }) => {
     ((original_price - price) / original_price) * 100
   );
 
-  const { addToWishlistHandler } = useContext(WishlistContext);
+  const {
+    wishlist,
+    addToWishlistHandler,
+    removeFromWishlistHandler,
+    disableAddRemoveWishlistBtn,
+  } = useContext(WishlistContext);
+  const { isLoggedIn } = useContext(AuthContext);
+  const navigate = useNavigate();
 
   return (
     <div className="product-card">
@@ -75,7 +84,15 @@ const ProductCard = ({ product }) => {
       </div>
       <div className="add-to-cart-btn-div">
         {sizesAvailable.length > 0 ? (
-          <button className="add-to-cart-btn cursor-pointer">
+          <button
+            className="add-to-cart-btn cursor-pointer"
+            onClick={() => {
+              if (isLoggedIn) {
+              } else {
+                navigate("/login");
+              }
+            }}
+          >
             <AiOutlineShoppingCart size={14} />
             Add To Cart
           </button>
@@ -83,13 +100,23 @@ const ProductCard = ({ product }) => {
           <span className="out-of-stock-label">Out Of Stock</span>
         )}
         <button
+          disabled={disableAddRemoveWishlistBtn}
           onClick={() => {
-            addToWishlistHandler(product);
+            if (isLoggedIn) {
+              wishlist?.find(({ _id: toFindId }) => toFindId === _id)
+                ? removeFromWishlistHandler(_id)
+                : addToWishlistHandler(product);
+            } else {
+              navigate("/login");
+            }
           }}
         >
-          <AiOutlineHeart size={42} className="cursor-pointer" />
+          {wishlist?.find(({ _id: toFindId }) => toFindId === _id) ? (
+            <AiFillHeart size={42} color="#813772" className="cursor-pointer" />
+          ) : (
+            <AiOutlineHeart size={42} className="cursor-pointer" />
+          )}
         </button>
-        {/* <AiFillHeart size={42} color="#813772" className="cursor-pointer" /> */}
       </div>
       <div>
         {sizesAvailable.map((size) => (
