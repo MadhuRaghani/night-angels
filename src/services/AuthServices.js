@@ -143,5 +143,7 @@ export const logoutHandler = (setUser, setToken, clearWishlist) => {
   setToken(null);
   setUser(null);
   clearWishlist();
+
+  toast.success("Logged Off Successfully");
   // delete cart and wishlist from context
 };

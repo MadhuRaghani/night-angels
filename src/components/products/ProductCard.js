@@ -100,6 +100,7 @@ const ProductCard = ({ product }) => {
           <span className="out-of-stock-label">Out Of Stock</span>
         )}
         <button
+          className="add-to-wishlist-btn cursor-pointer"
           disabled={disableAddRemoveWishlistBtn}
           onClick={() => {
             if (isLoggedIn) {
@@ -112,9 +113,9 @@ const ProductCard = ({ product }) => {
           }}
         >
           {wishlist?.find(({ _id: toFindId }) => toFindId === _id) ? (
-            <AiFillHeart size={42} color="#813772" className="cursor-pointer" />
+            <AiFillHeart size={42} color="#813772" />
           ) : (
-            <AiOutlineHeart size={42} className="cursor-pointer" />
+            <AiOutlineHeart size={42} color="#813772" />
           )}
         </button>
       </div>

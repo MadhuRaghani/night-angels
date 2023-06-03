@@ -211,8 +211,8 @@
   font-size: medium;
   background-color: var(--primary-color);
   color: var(--white-color);
-  border-radius: 0.2rem;
-  border-color: var(--secondary-color);
+  border-radius: 0.5rem;
+  border: 2px solid var(--secondary-color);
   padding: 0.2rem;
 }
 
@@ -226,4 +226,9 @@
   border-radius: 0.2rem;
   display: flex;
   align-items: center;
+}
+
+.add-to-wishlist-btn {
+  border: 0px;
+  background-color: var(--white-color);
 }

@@ -35,7 +35,6 @@ export default function WishlistContextProvider({ children }) {
         { headers: { authorization: token } }
       );
       setWishlist(response.data.wishlist);
-
       toast.success("Added to Wishlist");
     } catch (err) {
       console.error("Error in Wishlist", err);
@@ -51,6 +50,7 @@ export default function WishlistContextProvider({ children }) {
         headers: { authorization: token },
       });
       setWishlist(response.data.wishlist);
+      toast.success("Removed From Wishlist");
     } catch (err) {
       console.error("Error in Wishlist", err);
     } finally {
