@@ -4,6 +4,8 @@ import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 import "react-toastify/dist/ReactToastify.css";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { loginHandler } from "../../services/AuthServices";
+import { WishlistContext } from "../../contexts/WishlistContext";
+import { CartContext } from "../../contexts/CartContext";
 
 function Login() {
   const [email, setEmail] = useState("");
@@ -14,6 +16,8 @@ function Login() {
     errorMessage: "",
   });
   const { setIsLoggedIn, setUser, setToken } = useContext(AuthContext);
+  const { setWishlist } = useContext(WishlistContext);
+  const { setCart } = useContext(CartContext);
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -34,6 +38,8 @@ function Login() {
                 setErrorLogin,
                 setUser,
                 setToken,
+                setWishlist,
+                setCart,
                 navigate,
                 location
               );

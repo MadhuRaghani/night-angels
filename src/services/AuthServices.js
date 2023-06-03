@@ -1,5 +1,7 @@
 import axios from "axios";
 import { toast } from "react-toastify";
+import { getWishlist } from "./WishlistServices";
+import { getCart } from "./CartServices";
 const regexPassword =
   /^(?=.*[0-9])(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z])[a-zA-Z0-9!@#$%^&*]{8,14}$/;
 const regexEmail = /^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[A-Za-z]+$/;
@@ -91,6 +93,8 @@ export const loginHandler = async (
   setErrorLogin,
   setUser,
   setToken,
+  setWishlist,
+  setCart,
   navigate,
   location
 ) => {
@@ -113,10 +117,12 @@ export const loginHandler = async (
       setUser(response.data.foundUser);
       setToken(response.data.encodedToken);
 
+      setWishlist(response.data.foundUser.wishlist);
+      setCart(response.data.foundUser.cart);
+
       // setErrorLogin({ hasError: false, errorMessage: "" });
       setEmail("");
       setPassword("");
-      console.log(response);
 
       // navigate to page you came from
       if (location?.state?.from) {
@@ -137,13 +143,14 @@ export const loginHandler = async (
   }
 };
 
-export const logoutHandler = (setUser, setToken, clearWishlist) => {
+export const logoutHandler = (setUser, setToken, setWishlist, setCart) => {
   localStorage.removeItem("authenticationToken");
   localStorage.removeItem("userDetails");
   setToken(null);
   setUser(null);
-  clearWishlist();
-
+  setWishlist([]);
+  setCart([]);
+  localStorage.removeItem("userDetails");
+  localStorage.removeItem("authenticationToken");
   toast.success("Logged Off Successfully");
-  // delete cart and wishlist from context
 };

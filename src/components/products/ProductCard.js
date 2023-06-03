@@ -11,6 +11,12 @@ import {
 import { WishlistContext } from "../../contexts/WishlistContext";
 import { AuthContext } from "../../contexts/AuthContext";
 import { useNavigate } from "react-router-dom";
+import { CartContext } from "../../contexts/CartContext";
+import {
+  addToWishlistHandler,
+  removeFromWishlistHandler,
+} from "../../services/WishlistServices";
+import { addToCartHanler } from "../../services/CartServices";
 
 const ProductCard = ({ product }) => {
   // const navigate = useNavigate();
@@ -39,13 +45,16 @@ const ProductCard = ({ product }) => {
     ((original_price - price) / original_price) * 100
   );
 
+  const { isLoggedIn, token } = useContext(AuthContext);
+  const { cart, setCart, disableAddToCartBtn, setDisableAddToCartBtn } =
+    useContext(CartContext);
   const {
     wishlist,
-    addToWishlistHandler,
-    removeFromWishlistHandler,
+    setWishlist,
     disableAddRemoveWishlistBtn,
+    setDisableAddRemoveWishlistBtn,
   } = useContext(WishlistContext);
-  const { isLoggedIn } = useContext(AuthContext);
+
   const navigate = useNavigate();
 
   return (
@@ -86,15 +95,26 @@ const ProductCard = ({ product }) => {
         {sizesAvailable.length > 0 ? (
           <button
             className="add-to-cart-btn cursor-pointer"
+            disabled={disableAddToCartBtn}
             onClick={() => {
               if (isLoggedIn) {
+                cart?.find(({ _id: toFindId }) => _id === toFindId)
+                  ? navigate("/cart")
+                  : addToCartHanler(
+                      product,
+                      token,
+                      setCart,
+                      setDisableAddToCartBtn
+                    );
               } else {
                 navigate("/login");
               }
             }}
           >
             <AiOutlineShoppingCart size={14} />
-            Add To Cart
+            {cart?.find(({ _id: toFindId }) => _id === toFindId)
+              ? "Go To Cart"
+              : "Add To Cart"}
           </button>
         ) : (
           <span className="out-of-stock-label">Out Of Stock</span>
@@ -105,8 +125,18 @@ const ProductCard = ({ product }) => {
           onClick={() => {
             if (isLoggedIn) {
               wishlist?.find(({ _id: toFindId }) => toFindId === _id)
-                ? removeFromWishlistHandler(_id)
-                : addToWishlistHandler(product);
+                ? removeFromWishlistHandler(
+                    _id,
+                    token,
+                    setWishlist,
+                    setDisableAddRemoveWishlistBtn
+                  )
+                : addToWishlistHandler(
+                    product,
+                    token,
+                    setWishlist,
+                    setDisableAddRemoveWishlistBtn
+                  );
             } else {
               navigate("/login");
             }
