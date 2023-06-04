@@ -7,6 +7,7 @@ import {
   AiOutlineHeart,
   AiOutlineStar,
   AiFillHeart,
+  AiOutlineArrowRight,
 } from "react-icons/ai";
 import { WishlistContext } from "../../contexts/WishlistContext";
 import { AuthContext } from "../../contexts/AuthContext";
@@ -30,13 +31,14 @@ const ProductCard = ({ product }) => {
     price,
     brand,
     rating,
-    sizesAvailable,
+    size,
     image,
     // category,
     // fabric,
     // color,
     new_arrivals,
     reviews,
+    in_stock,
   } = product;
   // const { token } = useAuth();
   // const location = useLocation();
@@ -65,9 +67,7 @@ const ProductCard = ({ product }) => {
             <span>New Arrivals</span>
           </div>
         )}
-        {/* <div className="wishlist-div">
-          <AiOutlineHeart className="cursor-pointer" />
-        </div> */}
+        <div className="size-div">{size}</div>
         <div className="ratings-reviews-div">
           <span className="ratings-reviews-span">
             <AiOutlineStar size={14} />
@@ -92,7 +92,7 @@ const ProductCard = ({ product }) => {
         </div>
       </div>
       <div className="add-to-cart-btn-div">
-        {sizesAvailable.length > 0 ? (
+        {in_stock ? (
           <button
             className="add-to-cart-btn cursor-pointer"
             disabled={disableAddToCartBtn}
@@ -111,10 +111,15 @@ const ProductCard = ({ product }) => {
               }
             }}
           >
-            <AiOutlineShoppingCart size={14} />
-            {cart?.find(({ _id: toFindId }) => _id === toFindId)
-              ? "Go To Cart"
-              : "Add To Cart"}
+            {cart?.find(({ _id: toFindId }) => _id === toFindId) ? (
+              <>
+                Go To Cart <AiOutlineArrowRight size={14} />
+              </>
+            ) : (
+              <>
+                <AiOutlineShoppingCart size={14} /> Add To Cart
+              </>
+            )}
           </button>
         ) : (
           <span className="out-of-stock-label">Out Of Stock</span>
@@ -148,11 +153,6 @@ const ProductCard = ({ product }) => {
             <AiOutlineHeart size={42} color="#813772" />
           )}
         </button>
-      </div>
-      <div>
-        {sizesAvailable.map((size) => (
-          <span key={size}>{size}||</span>
-        ))}
       </div>
     </div>
   );

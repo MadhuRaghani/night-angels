@@ -8,10 +8,15 @@ function Wishlist() {
   const { wishlist } = useContext(WishlistContext);
 
   return (
-    <div className="all-products-div">
-      {wishlist.map((eachProduct) => (
-        <ProductCard product={eachProduct} key={eachProduct._id} />
-      ))}
+    <div>
+      <div>
+        <h2>My Wishlist({wishlist.length})</h2>
+      </div>
+      <div className="all-products-div">
+        {wishlist.map((eachProduct) => (
+          <ProductCard product={eachProduct} key={eachProduct._id} />
+        ))}
+      </div>
     </div>
   );
 }

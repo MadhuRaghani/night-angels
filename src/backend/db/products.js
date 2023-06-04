@@ -9,7 +9,7 @@ export const products = [
   //   original_price: "499",
   //   price: "159",
   //   rating: "4.1",
-  //   sizesAvailable: ["S", "M", "L"],
+  //   size: ["S", "M", "L"],
   //   image:
   //     "https://image.clovia.com/media/clovia-images/images/400x600/clovia-picture-assorted-tank-top-572829.jpg",
   //   category: "Topwear",
@@ -28,7 +28,8 @@ export const products = [
     original_price: "499",
     price: "299",
     rating: "2.3",
-    sizesAvailable: ["S", "M", "L", "XL", "XXL", "3XL"],
+    size: "M",
+    in_stock: true,
     image:
       "https://image.clovia.com/media/clovia-images/images/400x600/clovia-picture-cotton-racerback-tank-top-1-355314.jpg",
     category: "Topwear",
@@ -47,7 +48,8 @@ export const products = [
     original_price: "999",
     price: "349",
     rating: "3.5",
-    sizesAvailable: ["S", "M", "L", "XL", "XXL", "3XL"],
+    size: "M",
+    in_stock: true,
     image:
       "https://image.clovia.com/media/clovia-images/images/400x600/clovia-picture-quirky-text-top-in-dark-pink-100-cotton-677199.jpg",
     category: "Topwear",
@@ -66,7 +68,8 @@ export const products = [
     original_price: "999",
     price: "329",
     rating: "4.1",
-    sizesAvailable: ["S", "M", "L", "3XL"],
+    size: "L",
+    in_stock: true,
     image:
       "https://image.clovia.com/media/clovia-images/images/400x600/clovia-picture-lt0124f14-726353.JPG",
     category: "Topwear",
@@ -85,7 +88,8 @@ export const products = [
     original_price: "899",
     price: "329",
     rating: "2.7",
-    sizesAvailable: ["M", "L", "XXL", "3XL"],
+    size: "XL",
+    in_stock: true,
     image:
       "https://image.clovia.com/media/clovia-images/images/400x600/clovia-picture-chic-basic-top-in-black-cotton-rich-1-898972.jpg",
     category: "Topwear",
@@ -104,7 +108,8 @@ export const products = [
     original_price: "999",
     price: "399",
     rating: "4.5",
-    sizesAvailable: ["S", "M", "L", "3XL"],
+    size: "L",
+    in_stock: true,
     image:
       "https://image.clovia.com/media/clovia-images/images/400x600/clovia-picture-printed-top-in-light-grey-100-cotton-937622.jpg",
     category: "Topwear",
@@ -123,7 +128,8 @@ export const products = [
     original_price: "1299",
     price: "399",
     rating: "1.7",
-    sizesAvailable: [],
+    size: "XL",
+    in_stock: false,
     image:
       "https://image.clovia.com/media/clovia-images/images/400x600/clovia-picture-lb0186p08-829429.JPG",
     category: "Bottomwear",
@@ -142,7 +148,8 @@ export const products = [
     original_price: "2749",
     price: "749",
     rating: "3.5",
-    sizesAvailable: ["S", "M", "L"],
+    size: "XXL",
+    in_stock: true,
     image:
       "https://image.clovia.com/media/clovia-images/images/400x600/clovia-picture-lb0139a19-479514.jpg",
     category: "Bottomwear",
@@ -151,7 +158,6 @@ export const products = [
     color: "multi",
     new_arrivals: false,
     reviews: "978",
-    in_stock: false,
     delivery_time: "3",
   },
   {
@@ -162,7 +168,8 @@ export const products = [
     original_price: "1899",
     price: "569",
     rating: "3.2",
-    sizesAvailable: ["S", "M", "L", "XL", "XXL", "3XL"],
+    size: "M",
+    in_stock: true,
     image:
       "https://image.clovia.com/media/clovia-images/images/400x600/clovia-picture-chic-basic-cuffed-joggers-in-light-grey-loop-knit-683076.jpg",
     category: "Bottomwear",
@@ -181,7 +188,8 @@ export const products = [
     original_price: "1999",
     price: "592",
     rating: "2.1",
-    sizesAvailable: ["XL", "XXL", "3XL"],
+    size: "XL",
+    in_stock: true,
     image:
       "https://image.clovia.com/media/clovia-images/images/400x600/clovia-picture-lb0192p09-476683.jpg",
     category: "Bottomwear",
@@ -200,7 +208,8 @@ export const products = [
     original_price: "1099",
     price: "399",
     rating: "3.5",
-    sizesAvailable: ["S", "XXL", "3XL"],
+    size: "XXL",
+    in_stock: true,
     image:
       "https://image.clovia.com/media/clovia-images/images/400x600/clovia-picture-lb0174k18-452064.jpg",
     category: "Bottomwear",
@@ -219,7 +228,8 @@ export const products = [
     original_price: "999",
     price: "399",
     rating: "3.8",
-    sizesAvailable: [],
+    size: "XL",
+    in_stock: false,
     image:
       "https://image.clovia.com/media/clovia-images/images/400x600/clovia-picture-lb0174y18-911802.jpg",
     category: "Bottomwear",
@@ -238,7 +248,8 @@ export const products = [
     original_price: "2049",
     price: "772",
     rating: "3.5",
-    sizesAvailable: ["S", "M", "L", "XL", "XXL", "3XL"],
+    size: "M",
+    in_stock: true,
     image:
       "https://image.clovia.com/media/clovia-images/images/400x600/clovia-picture-lb0179e04-309727.jpg",
     category: "Bottomwear",
@@ -257,7 +268,8 @@ export const products = [
     original_price: "2599",
     price: "1698",
     rating: "1.9",
-    sizesAvailable: ["S", "M", "L", "XL", "XXL", "3XL"],
+    size: "M",
+    in_stock: true,
     image:
       "https://image.clovia.com/media/clovia-images/images/400x600/clovia-picture-ls0592r03-589836.jpg",
     category: "Loungewear",
@@ -276,7 +288,8 @@ export const products = [
     original_price: "2499",
     price: "1999",
     rating: "4.1",
-    sizesAvailable: [],
+    size: "L",
+    in_stock: false,
     image:
       "https://image.clovia.com/media/clovia-images/images/400x600/clovia-picture-chic-basic-button-me-up-shirt-pyjama-set-in-soft-pink-modal-759952.jpg",
     category: "Loungewear",
@@ -295,7 +308,8 @@ export const products = [
     original_price: "3499",
     price: "2799",
     rating: "2.5",
-    sizesAvailable: ["S", "XXL", "3XL"],
+    size: "3XL",
+    in_stock: true,
     image:
       "https://image.clovia.com/media/clovia-images/images/400x600/clovia-picture-chic-basic-top-pyjama-set-in-baby-pink-velour-326603.jpg",
     category: "Loungewear",
@@ -314,7 +328,8 @@ export const products = [
     original_price: "3299",
     price: "2799",
     rating: "3.9",
-    sizesAvailable: ["S", "M", "L", "XL", "XXL", "3XL"],
+    size: "M",
+    in_stock: true,
     image:
       "https://image.clovia.com/media/clovia-images/images/400x600/clovia-picture-chic-basic-top-pyjama-shrug-set-in-black-velour-572703.jpg",
     category: "Loungewear",
@@ -333,7 +348,8 @@ export const products = [
     original_price: "999",
     price: "789",
     rating: "1.9",
-    sizesAvailable: ["S", "L", "XL"],
+    size: "XL",
+    in_stock: true,
     image:
       "https://image.clovia.com/media/clovia-images/images/400x600/clovia-picture-chic-basic-button-me-up-shirt-pyjama-set-in-dusky-pink-satin-426522.jpg",
     category: "Loungewear",
@@ -352,7 +368,8 @@ export const products = [
     original_price: "2499",
     price: "1007",
     rating: "3.5",
-    sizesAvailable: [],
+    size: "L",
+    in_stock: false,
     image:
       "https://image.clovia.com/media/clovia-images/images/400x600/clovia-picture-sassy-stripes-top-pyjama-robe-set-in-maroon-rayon-513226.jpg",
     category: "Loungewear",
@@ -371,7 +388,8 @@ export const products = [
     original_price: "899",
     price: "349",
     rating: "1.5",
-    sizesAvailable: ["S", "M", "L", "XL", "XXL", "3XL"],
+    size: "M",
+    in_stock: true,
     image:
       "https://image.clovia.com/media/clovia-images/images/400x600/clovia-picture-cotton-rich-pyjama-1-729815.jpg",
     category: "Loungewear",
@@ -390,7 +408,8 @@ export const products = [
     original_price: "3749",
     price: "855",
     rating: "2.1",
-    sizesAvailable: ["S", "M", "L", "XL", "XXL", "3XL"],
+    size: "M",
+    in_stock: true,
     image:
       "https://image.clovia.com/media/clovia-images/images/400x600/clovia-picture-ls0680a08-624984.jpg",
     category: "Nightsuit",
@@ -409,7 +428,8 @@ export const products = [
     original_price: "3249",
     price: "735",
     rating: "3.1",
-    sizesAvailable: ["S", "M", "L", "XL", "XXL", "3XL"],
+    size: "M",
+    in_stock: true,
     image:
       "https://image.clovia.com/media/clovia-images/images/400x600/clovia-picture-ls0696p17-542461.jpg",
     category: "Nightsuit",
@@ -428,7 +448,8 @@ export const products = [
     original_price: "4099",
     price: "932",
     rating: "3.1",
-    sizesAvailable: [],
+    size: "3XL",
+    in_stock: false,
     image:
       "https://image.clovia.com/media/clovia-images/images/400x600/clovia-picture-print-me-pretty-button-down-shirt-pyjama-set-in-lilac-100-cotton-188179.jpg",
     category: "Nightsuit",
@@ -447,7 +468,8 @@ export const products = [
     original_price: "3699",
     price: "836",
     rating: "2.1",
-    sizesAvailable: ["S", "M", "L", "3XL"],
+    size: "L",
+    in_stock: true,
     image:
       "https://image.clovia.com/media/clovia-images/images/400x600/clovia-picture-ls0581p07-279215.jpg",
     category: "Nightsuit",
@@ -466,7 +488,8 @@ export const products = [
     original_price: "2949",
     price: "668",
     rating: "1.9",
-    sizesAvailable: ["S", "XL", "3XL"],
+    size: "XL",
+    in_stock: true,
     image:
       "https://image.clovia.com/media/clovia-images/images/400x600/clovia-picture-print-me-pretty-top-in-baby-blue-chic-basic-shorts-in-baby-pink-100-cotton-909764.jpg",
     category: "Nightsuit",
@@ -485,7 +508,8 @@ export const products = [
     original_price: "2499",
     price: "549",
     rating: "4.5",
-    sizesAvailable: ["S", "XL", "3XL"],
+    size: "XL",
+    in_stock: true,
     image:
       "https://image.clovia.com/media/clovia-images/images/400x600/clovia-picture-ls0555a02-397620.jpg",
     category: "Nightsuit",
@@ -504,7 +528,8 @@ export const products = [
     original_price: "4099",
     price: "932",
     rating: "3.5",
-    sizesAvailable: [],
+    size: "3XL",
+    in_stock: false,
     image:
       "https://image.clovia.com/media/clovia-images/images/400x600/clovia-picture-ls0645d22-106857.jpg",
     category: "Nightsuit",
@@ -523,7 +548,8 @@ export const products = [
     original_price: "2499",
     price: "489",
     rating: "3.9",
-    sizesAvailable: ["S", "M", "L", "XL", "XXL", "3XL"],
+    size: "M",
+    in_stock: true,
     image:
       "https://image.clovia.com/media/clovia-images/images/400x600/clovia-picture-ls0516g18-168815.jpg",
     category: "Nightsuit",
@@ -542,7 +568,8 @@ export const products = [
     original_price: "2099",
     price: "811",
     rating: "3.1",
-    sizesAvailable: ["S", "M", "L", "XL", "XXL", "3XL"],
+    size: "M",
+    in_stock: true,
     image:
       "https://image.clovia.com/media/clovia-images/images/400x600/clovia-picture-ns1359p09-444585.jpg",
     category: "Nightdress",
@@ -561,7 +588,8 @@ export const products = [
     original_price: "1899",
     price: "851",
     rating: "3.1",
-    sizesAvailable: ["S", "XL", "3XL"],
+    size: "XL",
+    in_stock: true,
     image:
       "https://image.clovia.com/media/clovia-images/images/400x600/clovia-picture-ns0865e13-868120.jpg",
     category: "Nightdress",
@@ -580,7 +608,8 @@ export const products = [
     original_price: "999",
     price: "799",
     rating: "1.5",
-    sizesAvailable: ["S", "XL", "3XL"],
+    size: "XL",
+    in_stock: true,
     image:
       "https://image.clovia.com/media/clovia-images/images/400x600/clovia-picture-pretty-florals-short-nightdress-in-grey-100-cotton-947912.jpg",
     category: "Nightdress",
@@ -599,7 +628,8 @@ export const products = [
     original_price: "1199",
     price: "999",
     rating: "3.1",
-    sizesAvailable: [],
+    size: "S",
+    in_stock: false,
     image:
       "https://image.clovia.com/media/clovia-images/images/400x600/clovia-picture-tie-dye-print-short-night-dress-in-multicolour-100-cotton-274925.jpg",
     category: "Nightdress",
@@ -618,7 +648,8 @@ export const products = [
     original_price: "1899",
     price: "489",
     rating: "3.1",
-    sizesAvailable: ["S", "XL", "3XL"],
+    size: "XL",
+    in_stock: true,
     image:
       "https://image.clovia.com/media/clovia-images/images/400x600/clovia-picture-giraffe-print-short-night-dress-in-sky-blue-100-cotton-893875.jpg",
     category: "Nightdress",
@@ -637,7 +668,8 @@ export const products = [
     original_price: "1699",
     price: "875",
     rating: "3.1",
-    sizesAvailable: ["S", "M", "L", "XL", "XXL", "3XL"],
+    size: "M",
+    in_stock: true,
     image:
       "https://image.clovia.com/media/clovia-images/images/400x600/clovia-picture-ns1145r18-905361.jpg",
     category: "Nightdress",
@@ -656,7 +688,8 @@ export const products = [
     original_price: "1199",
     price: "899",
     rating: "4.8",
-    sizesAvailable: ["S", "M", "L", "XL", "XXL", "3XL"],
+    size: "M",
+    in_stock: true,
     image:
       "https://image.clovia.com/media/clovia-images/images/400x600/clovia-picture-chic-basic-robe-short-nighty-set-in-rust-brown-satin-896300.jpg",
     category: "Nightdress",
