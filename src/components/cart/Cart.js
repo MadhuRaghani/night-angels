@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { CartContext } from "../../contexts/CartContext";
 import CartProductCard from "./CartProductCard";
+import CheckoutDetails from "./CheckoutDetails";
 
 function Cart() {
   const { cart } = useContext(CartContext);
@@ -17,7 +18,7 @@ function Cart() {
               <CartProductCard product={eachProduct} key={eachProduct._id} />
             ))}
           </div>
-          <div>Checkout Part</div>
+          <CheckoutDetails />
         </div>
       )}
     </div>

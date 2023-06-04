@@ -1,7 +1,5 @@
 import axios from "axios";
 import { toast } from "react-toastify";
-import { getWishlist } from "./WishlistServices";
-import { getCart } from "./CartServices";
 const regexPassword =
   /^(?=.*[0-9])(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z])[a-zA-Z0-9!@#$%^&*]{8,14}$/;
 const regexEmail = /^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[A-Za-z]+$/;
