@@ -159,19 +159,20 @@ const CartProductCard = ({ product }) => {
               disabled={disableAddToCartBtn}
               onClick={() => {
                 if (isLoggedIn) {
+                  wishlist?.find(({ _id: toFindId }) => toFindId === _id)
+                    ? toast.warning("Alreaddy in Wishlist")
+                    : addToWishlistHandler(
+                        product,
+                        token,
+                        setWishlist,
+                        setDisableAddRemoveWishlistBtn
+                      );
                   removeFromCartHandler(
                     _id,
                     token,
                     setCart,
                     setDisableAddToCartBtn
                   );
-                  wishlist?.find(({ _id: toFindId }) => toFindId === _id) ||
-                    addToWishlistHandler(
-                      product,
-                      token,
-                      setWishlist,
-                      setDisableAddRemoveWishlistBtn
-                    );
                 } else {
                   navigate("/login");
                 }

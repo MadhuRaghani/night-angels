@@ -9,10 +9,14 @@ import {
 import "../navbar/Navbar.css";
 import { ProductsContext } from "../../contexts/ProductsContext";
 import { AuthContext } from "../../contexts/AuthContext";
+import { CartContext } from "../../contexts/CartContext";
+import { WishlistContext } from "../../contexts/WishlistContext";
 
 function Navbar() {
   const { filtersDispatch } = useContext(ProductsContext);
   const { isLoggedIn } = useContext(AuthContext);
+  const { cart } = useContext(CartContext);
+  const { wishlist } = useContext(WishlistContext);
 
   return (
     <div className="nav-bar">
@@ -44,11 +48,17 @@ function Navbar() {
           <Link className="link" to={isLoggedIn ? "/user" : "/login"}>
             <AiOutlineUser size={28} />
           </Link>
-          <Link className="link" to="/wishlist">
+          <Link className="link wishlist-link" to="/wishlist">
             <AiOutlineHeart size={28} />
+            {wishlist.length > 0 && (
+              <p className="wishlist-number">{wishlist.length}</p>
+            )}
           </Link>
-          <Link className="link" to="/cart">
+          <Link className="link  wishlist-link" to="/cart">
             <AiOutlineShoppingCart size={28} />
+            {cart.length > 0 && (
+              <p className="wishlist-number">{cart.length}</p>
+            )}
           </Link>
         </div>
       </nav>

@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { CartContext } from "../../contexts/CartContext";
 import CartProductCard from "./CartProductCard";
 import CheckoutDetails from "./CheckoutDetails";
+import "../cart/Cart.css";
 
 function Cart() {
   const { cart } = useContext(CartContext);

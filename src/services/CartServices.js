@@ -73,3 +73,18 @@ export const incrementDecrementHandler = async (
     setDisableAddToCartBtn(false);
   }
 };
+
+export const getCartPriceDetails = (cart) => {
+  const totalPrices = cart.reduce(
+    (accPrices, { original_price, price, qty }) => {
+      return {
+        totalOriginalPrice:
+          accPrices.totalOriginalPrice + parseInt(original_price) * qty,
+        totalPrice: accPrices.totalPrice + parseInt(price) * qty,
+        // totalDiscount: accPrices.totalDiscount + (original_price - price),
+      };
+    },
+    { totalOriginalPrice: 0, totalPrice: 0 }
+  );
+  return { totalItems: cart.length, ...totalPrices };
+};
