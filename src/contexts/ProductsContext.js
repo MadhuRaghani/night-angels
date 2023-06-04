@@ -32,9 +32,7 @@ export default function ProductsContextProvider({ children }) {
 
   const availableSizesProducts =
     filters.sizes.length > 0
-      ? categoriesedProducts.filter(({ sizesAvailable }) =>
-          filters.sizes.some((eachSize) => sizesAvailable.includes(eachSize))
-        )
+      ? categoriesedProducts.filter(({ size }) => filters.sizes.includes(size))
       : categoriesedProducts;
 
   const ratingStarsProducts =
