@@ -42,7 +42,13 @@ function Navbar() {
           </label>
         </div>
         <div className="nav-right">
-          <Link className="link" to="/productlists">
+          <Link
+            className="link"
+            to="/productlists"
+            onClick={() => {
+              filtersDispatch({ type: "CLEAR_FILTERS" });
+            }}
+          >
             Explore
           </Link>
           <Link className="link" to={isLoggedIn ? "/user" : "/login"}>

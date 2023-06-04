@@ -16,6 +16,7 @@ function Home() {
           src="https://julietindia.com/wp-content/uploads/2023/01/3.webp"
           alt="hero"
           onClick={() => {
+            filtersDispatch({ type: "CLEAR_FILTERS" });
             navigate("/productlists");
           }}
         />

@@ -1,6 +1,6 @@
 import React from "react";
 import "../footer/Footer.css";
-import { AiOutlineGithub } from "react-icons/ai";
+import { AiOutlineGithub, AiOutlineHeart } from "react-icons/ai";
 import { RxTwitterLogo, RxLinkedinLogo } from "react-icons/rx";
 
 function Footer() {
@@ -36,7 +36,9 @@ function Footer() {
           </a>
         </li>
       </ul>
-      <span>© No Copyright, Feel free to replicate.</span>
+      <span>
+        Made with <AiOutlineHeart size={14} /> by Madhu
+      </span>
     </footer>
   );
 }

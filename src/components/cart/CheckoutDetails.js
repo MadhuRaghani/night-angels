@@ -13,19 +13,23 @@ function CheckoutDetails() {
       <div>
         <h3>Price Details: ({totalItems} Items)</h3>
       </div>
+      {cart.map(({ id, title, qty, price }) => (
+        <div key={id} className="price-details-div">
+          <p>{`${title} - (${qty})`}</p>
+          <p className="price-tag-p">{price * qty}</p>
+        </div>
+      ))}
       <div className="price-details-div">
-        <p>Total MRP</p>
-        <p className="price-tag-p">{totalOriginalPrice}</p>
-      </div>
-      <div className="price-details-div">
-        <p>Discount</p>
-        <p className="price-tag-p">{totalDiscount}</p>
-      </div>
-      <div className="price-details-div total-amount-tag">
-        <p>Total Amount</p>
-        <p className="price-tag-p">{totalPrice}</p>
+        <p className="total-amount-tag">Total Amount</p>
+        <div className="price-and-original-price-div">
+          <p className="price-tag-p original-price-tag">{totalOriginalPrice}</p>
+          <p className="price-tag-p total-amount-tag">{totalPrice}</p>
+        </div>
       </div>
       <button className="checkout-btn cursor-pointer">Checkout</button>
+      <div className="discount-div">
+        Yayyyyy! You save <span className="price-tag-p">{totalDiscount}/-</span>
+      </div>
     </div>
   );
 }

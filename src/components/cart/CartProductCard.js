@@ -83,6 +83,7 @@ const CartProductCard = ({ product }) => {
         <div className="product-details-card-div">
           <div className="title-div">
             <p className="product-brand">{brand}</p>
+            <p className="product-title">{title}</p>
           </div>
           <div className="price-and-discount-div">
             <div className="price-div">
