@@ -27,6 +27,7 @@ function Home() {
           <div
             key={category._id}
             onClick={() => {
+              filtersDispatch({ type: "CLEAR_FILTERS" });
               filtersDispatch({
                 type: "CATEGORIES",
                 payload: category.categoryName,

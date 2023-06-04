@@ -6,7 +6,9 @@ import { RxTwitterLogo, RxLinkedinLogo } from "react-icons/rx";
 function Footer() {
   return (
     <footer className="footer">
-      <div className="footer-header">Connect With Me</div>
+      <div className="footer-header">
+        Made with <AiOutlineHeart size={14} /> by Madhu
+      </div>
       <ul className="list-non-bullet">
         <li className="list-item-inline">
           <a
@@ -36,9 +38,7 @@ function Footer() {
           </a>
         </li>
       </ul>
-      <span>
-        Made with <AiOutlineHeart size={14} /> by Madhu
-      </span>
+      <span>© No Copyright, Feel free to replicate.</span>
     </footer>
   );
 }
