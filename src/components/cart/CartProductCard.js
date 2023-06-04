@@ -150,7 +150,7 @@ const CartProductCard = ({ product }) => {
                 }
               }}
             >
-              Remove From Cart
+              REMOVE
             </button>
           </div>
           <div className="add-to-cart-btn-div">
@@ -177,7 +177,7 @@ const CartProductCard = ({ product }) => {
                 }
               }}
             >
-              <AiOutlineArrowLeft /> Move To Wishlist
+              <AiOutlineArrowLeft /> MOVE TO WISHLIST
             </button>
           </div>
         </div>

@@ -302,7 +302,7 @@
 
 .remove-from-cart-btn {
   width: 100%;
-  font-size: medium;
+  /* font-size: medium; */
   background-color: var(--primary-color);
   color: var(--white-color);
   border-radius: 0.5rem;

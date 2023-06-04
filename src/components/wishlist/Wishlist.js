@@ -10,13 +10,19 @@ function Wishlist() {
   return (
     <div>
       <div>
-        <h2>My Wishlist({wishlist.length})</h2>
+        <h2>
+          {wishlist.length > 0
+            ? `My Wishlist(${wishlist.length})`
+            : "No Items in Wishlist"}
+        </h2>
       </div>
-      <div className="all-products-div">
-        {wishlist.map((eachProduct) => (
-          <ProductCard product={eachProduct} key={eachProduct._id} />
-        ))}
-      </div>
+      {wishlist.length > 0 && (
+        <div className="all-products-div">
+          {wishlist.map((eachProduct) => (
+            <ProductCard product={eachProduct} key={eachProduct._id} />
+          ))}
+        </div>
+      )}
     </div>
   );
 }

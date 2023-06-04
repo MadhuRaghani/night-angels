@@ -6,14 +6,20 @@ function Cart() {
   const { cart } = useContext(CartContext);
 
   return (
-    <div className="cart-page-div">
-      <div className="all-products-div-cart">
-        <h2>My Cart({cart.length})</h2>
-        {cart.map((eachProduct) => (
-          <CartProductCard product={eachProduct} key={eachProduct._id} />
-        ))}
+    <div>
+      <div>
+        <h2>{cart.length > 0 ? `My Cart(${cart.length})` : "Cart is Empty"}</h2>
       </div>
-      <div>Checkout Part</div>
+      {cart.length > 0 && (
+        <div className="cart-page-div">
+          <div className="all-products-div-cart">
+            {cart.map((eachProduct) => (
+              <CartProductCard product={eachProduct} key={eachProduct._id} />
+            ))}
+          </div>
+          <div>Checkout Part</div>
+        </div>
+      )}
     </div>
   );
 }
