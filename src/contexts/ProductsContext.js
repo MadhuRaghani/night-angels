@@ -1,12 +1,13 @@
 import { createContext, useState, useEffect, useReducer } from "react";
 import { filtersReducerFunction } from "../reducers/FiltersReducer";
-import axios from "axios";
+import { getProductsAndCategories } from "../services/ProductServices";
 
 export const ProductsContext = createContext();
 
 export default function ProductsContextProvider({ children }) {
   const [categories, setCategories] = useState([]);
   const [products, setProducts] = useState([]);
+  const [loader, setLoader] = useState(false);
   const [filters, filtersDispatch] = useReducer(filtersReducerFunction, {
     search: "",
     sort: "",
@@ -58,29 +59,15 @@ export default function ProductsContextProvider({ children }) {
           )
       : selectedPriceProducts;
 
-  // console.log(filters);
-
   useEffect(() => {
-    (async () => {
-      try {
-        const categoriesResponse = await axios.get("/api/categories", {});
-        if (categoriesResponse.status === 200) {
-          setCategories(categoriesResponse.data.categories);
-        }
-        const productsResponse = await axios.get("/api/products", {});
-        if (productsResponse.status === 200) {
-          setProducts(productsResponse.data.products);
-        }
-      } catch (e) {
-        console.error(e);
-      }
-    })();
+    getProductsAndCategories(setProducts, setCategories, setLoader);
   }, []);
 
   return (
     <ProductsContext.Provider
       value={{
         products,
+        loader,
         categories,
         sortedProducts,
         filtersDispatch,

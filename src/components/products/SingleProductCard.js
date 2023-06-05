@@ -17,9 +17,11 @@ import {
 } from "../../services/WishlistServices";
 import { addToCartHanler } from "../../services/CartServices";
 import { CartContext } from "../../contexts/CartContext";
+import Loader from "../loader/Loader";
 
 function SingleProductCard() {
   const [product, setProduct] = useState({});
+  const [loader, setLoader] = useState(false);
   const { productId } = useParams();
   const { isLoggedIn, token } = useContext(AuthContext);
   const {
@@ -33,7 +35,7 @@ function SingleProductCard() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    getProductHandler(productId, setProduct);
+    getProductHandler(productId, setProduct, setLoader);
   }, [productId]);
 
   const {
@@ -91,6 +93,7 @@ function SingleProductCard() {
 
   return (
     <div className="single-product-page-main-div">
+      {loader && <Loader />}
       <div className="single-product-page">
         <div className="image-card-div-product">
           {new_arrivals && (
