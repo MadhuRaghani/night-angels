@@ -42,7 +42,12 @@ const CartProductCard = ({ product }) => {
 
   return (
     <div className="product-card-cart">
-      <div className="image-card-div-cart">
+      <div
+        className="image-card-div-cart cursor-pointer"
+        onClick={() => {
+          navigate("/products/" + _id);
+        }}
+      >
         <div className="selected-size-div-cart">{size}</div>
         <div className="product-card-wishlist-div">
           <button

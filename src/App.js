@@ -12,6 +12,7 @@ import Navbar from "./components/navbar/Navbar";
 import { ToastContainer } from "react-toastify";
 import User from "./components/user/User";
 import PrivateRoute from "./components/privateRoute/PrivateRoute";
+import SingleProductCard from "./components/products/SingleProductCard";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/productlists" element={<ProductListing />} />
+        <Route path="/products/:productId" element={<SingleProductCard />} />
         <Route
           path="/user"
           element={

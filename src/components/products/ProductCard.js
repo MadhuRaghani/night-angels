@@ -60,35 +60,42 @@ const ProductCard = ({ product }) => {
   const navigate = useNavigate();
 
   return (
-    <div className="product-card">
-      <div className="image-card-div">
-        {new_arrivals && (
-          <div className="new-arrivals-div">
-            <span>New Arrivals</span>
+    <div className="product-card zoom">
+      <div
+        className="cursor-pointer"
+        onClick={() => {
+          navigate("/products/" + _id);
+        }}
+      >
+        <div className="image-card-div">
+          {new_arrivals && (
+            <div className="new-arrivals-div">
+              <span>New Arrivals</span>
+            </div>
+          )}
+          <div className="size-div">{size}</div>
+          <div className="ratings-reviews-div">
+            <span className="ratings-reviews-span">
+              <AiOutlineStar size={14} />
+              {rating} | {reviews}
+            </span>
           </div>
-        )}
-        <div className="size-div">{size}</div>
-        <div className="ratings-reviews-div">
-          <span className="ratings-reviews-span">
-            <AiOutlineStar size={14} />
-            {rating} | {reviews}
-          </span>
-        </div>
-        <div className="image-div">
-          <img src={image} alt={title} />
-        </div>
-      </div>
-      <div className="product-details-card-div">
-        <div className="title-div">
-          <p className="product-brand">{brand}</p>
-          <p className="product-title">{title}</p>
-        </div>
-        <div className="price-and-discount-div">
-          <div className="price-div">
-            <span className="product-price">₹{price}</span>
-            <span className="product-original-price">₹{original_price}</span>
+          <div>
+            <img src={image} alt={title} />
           </div>
-          <span className="product-discount">({discount}% OFF)</span>
+        </div>
+        <div className="product-details-card-div">
+          <div className="title-div">
+            <p className="product-brand">{brand}</p>
+            <p className="product-title">{title}</p>
+          </div>
+          <div className="price-and-discount-div">
+            <div className="price-div">
+              <span className="product-price">₹{price}</span>
+              <span className="product-original-price">₹{original_price}</span>
+            </div>
+            <span className="product-discount">({discount}% OFF)</span>
+          </div>
         </div>
       </div>
       <div className="add-to-cart-btn-div">
