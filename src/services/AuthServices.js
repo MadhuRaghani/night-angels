@@ -47,7 +47,7 @@ export const signUpHandler = async (
       const response = await axios.post("/api/auth/signup", {
         ...signUpData,
       });
-      console.log(response);
+      // console.log(response);
       if (response.status === 201) {
         toast.success("SignUp Successful");
         // setErrorSignup({ hasError: false, errorMessage: "" });
@@ -75,9 +75,20 @@ export const signUpHandler = async (
     }
   } catch (e) {
     const err = e.response.data.errors[0];
+    setErrorSignup({ hasError: true, errorMessage: err });
     err.includes("Email Already Exists")
-      ? setErrorSignup("Account Already exists.")
-      : setErrorSignup(err);
+      ? setErrorSignup({
+          hasError: true,
+          errorMessage: "Account Already exists.",
+        })
+      : setErrorSignup({ hasError: true, errorMessage: err });
+    setSignUpData({
+      firstName: "",
+      lastName: "",
+      email: "",
+      password: "",
+      confirmPassword: "",
+    });
   }
 };
 
@@ -141,13 +152,20 @@ export const loginHandler = async (
   }
 };
 
-export const logoutHandler = (setUser, setToken, setWishlist, setCart) => {
+export const logoutHandler = (
+  setUser,
+  setToken,
+  setWishlist,
+  setCart,
+  setIsLoggedIn
+) => {
   localStorage.removeItem("authenticationToken");
   localStorage.removeItem("userDetails");
   setToken(null);
   setUser(null);
   setWishlist([]);
   setCart([]);
+  setIsLoggedIn(false);
   localStorage.removeItem("userDetails");
   localStorage.removeItem("authenticationToken");
   toast.success("Logged Off Successfully");

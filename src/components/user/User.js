@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 import "../user/User.css";
 
 function User() {
-  const { user, setUser, setToken } = useContext(AuthContext);
+  const { user, setUser, setToken, setIsLoggedIn } = useContext(AuthContext);
   const { setWishlist } = useContext(WishlistContext);
   const { setCart } = useContext(CartContext);
   const navigate = useNavigate();
@@ -27,7 +27,13 @@ function User() {
         </button>
         <button
           onClick={() => {
-            logoutHandler(setUser, setToken, setWishlist, setCart);
+            logoutHandler(
+              setUser,
+              setToken,
+              setWishlist,
+              setCart,
+              setIsLoggedIn
+            );
           }}
         >
           Logout
