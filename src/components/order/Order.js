@@ -2,17 +2,17 @@ import React, { useContext } from "react";
 import { CartContext } from "../../contexts/CartContext";
 import { getCartPriceDetails } from "../../services/CartServices";
 import "../order/Order.css";
+import ConfettiCelebration from "../confettiCelebration/ConfettiCelebration";
 
 function Order() {
   const { order } = useContext(CartContext);
-
   const { totalItems, totalOriginalPrice, totalPrice } =
     getCartPriceDetails(order);
   const totalDiscount = totalOriginalPrice - totalPrice;
-  console.log(order);
 
   return (
     <div className="order-page-div">
+      <ConfettiCelebration />
       <div className="order-summary-div">
         <div>
           <h3>Order Details: ({totalItems} Items)</h3>

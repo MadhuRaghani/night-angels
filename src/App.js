@@ -77,7 +77,7 @@ function App() {
         />
         <Route path="/mockman" element={<Mockman />} />
       </Routes>
-      <ToastContainer />
+      <ToastContainer position="bottom-right" newestOnTop />
       <Footer />
     </div>
   );

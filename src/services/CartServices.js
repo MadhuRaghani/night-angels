@@ -36,7 +36,6 @@ export const removeFromCartHandler = async (
     const response = await axios.delete("/api/user/cart/" + productId, {
       headers: { authorization: token },
     });
-    console.log(response);
     if (response.status === 200) {
       setCart(response.data.cart);
       toast.warning("Removed From Cart");
@@ -93,7 +92,6 @@ export const getCartPriceDetails = (cart) => {
 export const placeAnOrder = async (
   cart,
   setCart,
-
   token,
   setDisableAddToCartBtn
 ) => {
