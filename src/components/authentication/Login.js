@@ -76,9 +76,19 @@ function Login() {
                 </label>
               </div>
             </div>
-            <div>
+            <div className="submit-btn-div">
               <button className="submit-btn" type="submit">
                 Login
+              </button>
+              <button
+                className="submit-btn"
+                type="button"
+                onClick={() => {
+                  setEmail("madhu@gmail.com");
+                  setPassword("Madhu123*");
+                }}
+              >
+                Login As Guest
               </button>
             </div>
           </form>
