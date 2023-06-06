@@ -1,12 +1,14 @@
 import React, { useContext } from "react";
 import { CartContext } from "../../contexts/CartContext";
 import { getCartPriceDetails } from "../../services/CartServices";
+import { useNavigate } from "react-router-dom";
 
-function CheckoutDetails() {
+function CheckoutDetails({ cartOrCheckout }) {
   const { cart } = useContext(CartContext);
   const { totalItems, totalOriginalPrice, totalPrice } =
     getCartPriceDetails(cart);
   const totalDiscount = totalOriginalPrice - totalPrice;
+  const navigate = useNavigate();
 
   return (
     <div className="checkout-details-div">
@@ -26,7 +28,14 @@ function CheckoutDetails() {
           <p className="price-tag-p total-amount-tag">{totalPrice}</p>
         </div>
       </div>
-      <button className="checkout-btn cursor-pointer">Checkout</button>
+      <button
+        className="checkout-btn cursor-pointer"
+        onClick={() => {
+          cartOrCheckout === "cart" && navigate("/checkout");
+        }}
+      >
+        {cartOrCheckout === "cart" ? "Checkout" : "Place Order"}
+      </button>
       <div className="discount-div">
         Yayyyyy! You save <span className="price-tag-p">{totalDiscount}/-</span>
       </div>

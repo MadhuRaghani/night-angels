@@ -58,7 +58,7 @@
   align-self: flex-start;
 }
 
-input {
+.login-card input {
   background-color: var(--secondary-color);
   border: 0.1rem solid var(--primary-color);
   border-radius: 0.2rem;

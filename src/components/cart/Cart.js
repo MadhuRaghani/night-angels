@@ -19,7 +19,7 @@ function Cart() {
               <CartProductCard product={eachProduct} key={eachProduct._id} />
             ))}
           </div>
-          <CheckoutDetails />
+          <CheckoutDetails cartOrCheckout={"cart"} />
         </div>
       )}
     </div>

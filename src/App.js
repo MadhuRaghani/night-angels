@@ -13,6 +13,7 @@ import { ToastContainer } from "react-toastify";
 import User from "./components/user/User";
 import PrivateRoute from "./components/privateRoute/PrivateRoute";
 import SingleProductCard from "./components/products/SingleProductCard";
+import Checkout from "./components/checkout/Checkout";
 
 function App() {
   return (
@@ -45,6 +46,14 @@ function App() {
           element={
             <PrivateRoute>
               <Cart />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/checkout"
+          element={
+            <PrivateRoute>
+              <Checkout />
             </PrivateRoute>
           }
         />

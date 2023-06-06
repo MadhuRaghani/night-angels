@@ -1,0 +1,116 @@
+.checkout-page-div {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.address-card {
+  font-family: "Wix Madefor Display", sans-serif;
+  box-shadow: var(--primary-color) 2px 7px 7px 0px;
+  padding: 0.5rem;
+  margin: 0.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 0.2rem;
+}
+
+.edit-delete-address-btn-div {
+  margin-top: 0.2rem;
+  display: flex;
+  gap: 0.2rem;
+  justify-content: space-evenly;
+}
+
+.edit-delete-address-btn {
+  /* width: 100%; */
+  /* font-size: medium; */
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  border-radius: 0.5rem;
+  border: 2px solid var(--primary-color);
+  padding: 0.5rem 1rem;
+}
+
+.address-details-div {
+  display: flex;
+  /* justify-content: space-between; */
+  /* justify-content: space-evenly; */
+  /* gap: 2rem; */
+  text-align: left;
+  flex-direction: column;
+  padding: 0.5rem 0;
+}
+
+.address-details-div p,
+h4 {
+  margin-block-start: 0rem;
+  margin-block-end: 0rem;
+}
+
+.selected-label {
+  font-size: medium;
+  background-color: var(--gray-color);
+  color: var(--white-color);
+  padding: 0.5rem 1rem;
+  border-radius: 0.3rem;
+}
+
+.add-new-address-btn {
+  font-size: large;
+  color: var(--primary-color);
+  background-color: var(--white-color);
+  border-radius: 0.5rem;
+  border: 2px solid var(--primary-color);
+  padding: 0.5rem 1rem;
+  box-shadow: var(--primary-color) 2px 7px 7px 0px;
+}
+
+.add-new-address-form {
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--primary-color) 2px 7px 7px 0px;
+  padding: 0.5rem;
+  font-family: "Wix Madefor Display", sans-serif;
+}
+
+.address-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.address-form input {
+  font-size: large;
+  padding: 0.2rem;
+  border: 0.1rem solid var(--primary-color);
+  border-radius: 0.2rem;
+  color: var(--primary-color);
+  margin: 0rem 0.2rem;
+}
+
+.add-new-address-form input::placeholder {
+  color: var(--primary-color);
+}
+
+.edit-address-div {
+  display: flex;
+  gap: 0.2rem;
+}
+
+.add-new-address-form button {
+  width: 50%;
+  font-size: medium;
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  border-radius: 0.5rem;
+  border: 2px solid var(--primary-color);
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.address-details-div span {
+  font-weight: bold;
+}
