@@ -33,7 +33,7 @@ export function filtersReducerFunction(filters, action) {
         categories: [],
         sizes: [],
         stars: "",
-        price: "",
+        price: "2799",
       };
     }
     default: {
