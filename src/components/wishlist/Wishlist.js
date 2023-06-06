@@ -8,7 +8,7 @@ function Wishlist() {
   const { wishlist } = useContext(WishlistContext);
 
   return (
-    <div>
+    <div className="wishlist-cart-page-div">
       <div>
         <h2>
           {wishlist.length > 0

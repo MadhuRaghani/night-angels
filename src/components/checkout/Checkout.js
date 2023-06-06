@@ -8,14 +8,16 @@ function Checkout() {
   const { addresses } = useContext(AddressContext);
 
   return (
-    <div className="checkout-page-div">
-      <div className="manage-address-div">
-        {addresses.map((eachAddress) => (
-          <AddressCard address={eachAddress} />
-        ))}
-        <NewAddress />
+    <div className="wishlist-cart-page-div">
+      <div className="checkout-page-div">
+        <div className="manage-address-div">
+          {addresses.map((eachAddress) => (
+            <AddressCard address={eachAddress} />
+          ))}
+          <NewAddress />
+        </div>
+        <CheckoutDetails cartOrCheckout={"checkout"} />
       </div>
-      <CheckoutDetails cartOrCheckout={"checkout"} />
     </div>
   );
 }

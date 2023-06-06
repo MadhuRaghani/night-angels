@@ -38,7 +38,7 @@ export const removeFromWishlistHandler = async (
     });
     if (response.status === 200) {
       setWishlist(response.data.wishlist);
-      toast.success("Removed From Wishlist");
+      toast.warning("Removed From Wishlist");
     }
   } catch (err) {
     console.error("Error in Wishlist", err);

@@ -8,7 +8,7 @@ function Cart() {
   const { cart } = useContext(CartContext);
 
   return (
-    <div>
+    <div className="wishlist-cart-page-div">
       <div>
         <h2>{cart.length > 0 ? `My Cart(${cart.length})` : "Cart is Empty"}</h2>
       </div>

@@ -4,6 +4,7 @@ import { logoutHandler } from "../../services/AuthServices";
 import { WishlistContext } from "../../contexts/WishlistContext";
 import { CartContext } from "../../contexts/CartContext";
 import { useNavigate } from "react-router-dom";
+import "../user/User.css";
 
 function User() {
   const { user, setUser, setToken } = useContext(AuthContext);
@@ -12,7 +13,7 @@ function User() {
   const navigate = useNavigate();
 
   return (
-    <div>
+    <div className="user-profile-div">
       <h2>User Profile</h2>
       <p>Name: {user.firstName + " " + user.lastName}</p>
       <p>Email: {user.email}</p>
