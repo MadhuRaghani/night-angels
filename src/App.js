@@ -15,6 +15,7 @@ import PrivateRoute from "./components/privateRoute/PrivateRoute";
 import SingleProductCard from "./components/products/SingleProductCard";
 import Checkout from "./components/checkout/Checkout";
 import ManageAddress from "./components/user/ManageAddress";
+import Order from "./components/order/Order";
 
 function App() {
   return (
@@ -67,13 +68,14 @@ function App() {
           }
         />
         <Route
-          path="/mockman"
+          path="/order"
           element={
             <PrivateRoute>
-              <Mockman />
+              <Order />
             </PrivateRoute>
           }
         />
+        <Route path="/mockman" element={<Mockman />} />
       </Routes>
       <ToastContainer />
       <Footer />

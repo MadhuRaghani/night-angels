@@ -36,6 +36,7 @@ export const removeFromCartHandler = async (
     const response = await axios.delete("/api/user/cart/" + productId, {
       headers: { authorization: token },
     });
+    console.log(response);
     if (response.status === 200) {
       setCart(response.data.cart);
       toast.warning("Removed From Cart");
@@ -87,4 +88,25 @@ export const getCartPriceDetails = (cart) => {
     { totalOriginalPrice: 0, totalPrice: 0 }
   );
   return { totalItems: cart.length, ...totalPrices };
+};
+
+export const placeAnOrder = async (
+  cart,
+  setCart,
+
+  token,
+  setDisableAddToCartBtn
+) => {
+  setDisableAddToCartBtn(true);
+  for (let i = 0; i < cart.length; i++) {
+    const productId = cart[i]._id;
+    const response = await axios.delete("/api/user/cart/" + productId, {
+      headers: { authorization: token },
+    });
+    if (response.status === 200 && i === cart.length - 1) {
+      setCart(response.data.cart);
+      toast.success("Yayyyy!! Order Placed.");
+    }
+  }
+  setDisableAddToCartBtn(false);
 };

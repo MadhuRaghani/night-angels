@@ -1,10 +1,18 @@
 import React, { useContext } from "react";
 import { CartContext } from "../../contexts/CartContext";
-import { getCartPriceDetails } from "../../services/CartServices";
+import { getCartPriceDetails, placeAnOrder } from "../../services/CartServices";
 import { useNavigate } from "react-router-dom";
+import { AuthContext } from "../../contexts/AuthContext";
 
 function CheckoutDetails({ cartOrCheckout }) {
-  const { cart } = useContext(CartContext);
+  const {
+    cart,
+    setCart,
+    setOrder,
+    disableAddToCartBtn,
+    setDisableAddToCartBtn,
+  } = useContext(CartContext);
+  const { token } = useContext(AuthContext);
   const { totalItems, totalOriginalPrice, totalPrice } =
     getCartPriceDetails(cart);
   const totalDiscount = totalOriginalPrice - totalPrice;
@@ -30,8 +38,15 @@ function CheckoutDetails({ cartOrCheckout }) {
       </div>
       <button
         className="checkout-btn cursor-pointer"
+        disabled={disableAddToCartBtn}
         onClick={() => {
-          cartOrCheckout === "cart" && navigate("/checkout");
+          if (cartOrCheckout === "cart") {
+            navigate("/checkout");
+          } else {
+            setOrder([...cart]);
+            placeAnOrder(cart, setCart, token, setDisableAddToCartBtn);
+            navigate("/order");
+          }
         }}
       >
         {cartOrCheckout === "cart" ? "Checkout" : "Place Order"}

@@ -153,7 +153,7 @@ const AddressCard = ({
           DELETE
         </button>
         {defaultAddressId === id ? (
-          <label className="selected-label">DEFAULT ADDRESS</label>
+          <label className="selected-label">SELECTED</label>
         ) : (
           <button
             className="edit-delete-address-btn cursor-pointer"
@@ -161,7 +161,7 @@ const AddressCard = ({
               setANewDefaultAddress(id);
             }}
           >
-            SET AS DEFAULT
+            SELECT
           </button>
         )}
       </div>

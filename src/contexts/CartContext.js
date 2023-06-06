@@ -5,6 +5,7 @@ export const CartContext = createContext();
 export default function CartContextProvider({ children }) {
   const [cart, setCart] = useState([]);
   const [disableAddToCartBtn, setDisableAddToCartBtn] = useState(false);
+  const [order, setOrder] = useState([]);
 
   return (
     <>
@@ -14,6 +15,8 @@ export default function CartContextProvider({ children }) {
           setCart,
           disableAddToCartBtn,
           setDisableAddToCartBtn,
+          order,
+          setOrder,
         }}
       >
         {children}
