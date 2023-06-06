@@ -14,7 +14,7 @@ export default function ProductsContextProvider({ children }) {
     categories: [],
     sizes: [],
     stars: "",
-    price: "",
+    price: "2799",
   });
 
   const filteredProducts =

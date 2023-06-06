@@ -94,7 +94,7 @@ function NewAddress() {
           placeholder="Enter Pincode"
           maxLength={6}
           onChange={(event) => {
-            onAddressDataChangeHandler(event, "zipcode");
+            onAddressDataChangeHandler(event, "zipCode");
           }}
         />
         <input
@@ -112,7 +112,7 @@ function NewAddress() {
           value={newAddress.alternate_phone}
           type="text"
           placeholder="Enter Alternate Phone Number"
-          maxLength={6}
+          maxLength={10}
           onChange={(event) => {
             onAddressDataChangeHandler(event, "alternate_phone");
           }}

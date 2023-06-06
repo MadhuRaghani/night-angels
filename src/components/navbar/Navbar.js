@@ -13,7 +13,7 @@ import { CartContext } from "../../contexts/CartContext";
 import { WishlistContext } from "../../contexts/WishlistContext";
 
 function Navbar() {
-  const { filtersDispatch } = useContext(ProductsContext);
+  const { searchFilters, filtersDispatch } = useContext(ProductsContext);
   const { isLoggedIn } = useContext(AuthContext);
   const { cart } = useContext(CartContext);
   const { wishlist } = useContext(WishlistContext);
@@ -30,6 +30,7 @@ function Navbar() {
           <label>
             <input
               type="text"
+              value={searchFilters}
               placeholder="Search"
               className="nav-search-input"
               onChange={(event) => {

@@ -83,7 +83,7 @@ const AddressCard = ({
           placeholder="Enter Pincode"
           maxLength={6}
           onChange={(event) => {
-            onAddressEditHandler(event, "zipcode");
+            onAddressEditHandler(event, "zipCode");
           }}
         />
         <input
@@ -101,7 +101,7 @@ const AddressCard = ({
           value={editedAddress.alternate_phone}
           type="text"
           placeholder="Enter Alternate Phone Number"
-          maxLength={6}
+          maxLength={10}
           onChange={(event) => {
             onAddressEditHandler(event, "alternate_phone");
           }}

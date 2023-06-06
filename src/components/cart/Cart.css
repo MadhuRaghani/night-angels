@@ -1,7 +1,7 @@
 .product-card-cart {
   /* width: 25rem; */
   box-shadow: var(--primary-color) 2px 7px 7px 0px;
-  padding: 0.2rem 0.5rem;
+  padding: 1rem;
   margin: 0.2rem;
   display: flex;
   justify-content: center;
@@ -36,6 +36,11 @@
   font-weight: bold;
   gap: 0.5rem;
   color: var(--primary-color);
+}
+
+.background-color {
+  background-color: var(--primary-color);
+  padding: 0.3rem;
 }
 
 .quantities-div {

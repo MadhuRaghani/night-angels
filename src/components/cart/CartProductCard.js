@@ -42,16 +42,18 @@ const CartProductCard = ({ product }) => {
 
   return (
     <div className="product-card-cart">
-      <div
-        className="image-card-div-cart cursor-pointer"
-        onClick={() => {
-          navigate("/products/" + _id);
-        }}
-      >
-        <div className="selected-size-div-cart">{size}</div>
+      <div className="image-card-div-cart cursor-pointer">
+        <div
+          className="selected-size-div-cart"
+          onClick={() => {
+            navigate("/products/" + _id);
+          }}
+        >
+          {size}
+        </div>
         <div className="product-card-wishlist-div">
           <button
-            className="add-to-wishlist-btn cursor-pointer"
+            className="add-to-wishlist-btn background-color cursor-pointer"
             disabled={disableAddRemoveWishlistBtn}
             onClick={() => {
               if (isLoggedIn) {
@@ -74,13 +76,18 @@ const CartProductCard = ({ product }) => {
             }}
           >
             {wishlist?.find(({ _id: toFindId }) => toFindId === _id) ? (
-              <AiFillHeart size={28} color="#813772" />
+              <AiFillHeart size={28} color="#fff" />
             ) : (
-              <AiOutlineHeart size={28} color="#813772" />
+              <AiOutlineHeart size={28} color="#fff" />
             )}
           </button>
         </div>
-        <div className="image-div-cart">
+        <div
+          className="image-div-cart"
+          onClick={() => {
+            navigate("/products/" + _id);
+          }}
+        >
           <img src={image} alt={title} />{" "}
         </div>
       </div>
@@ -116,7 +123,12 @@ const CartProductCard = ({ product }) => {
                         setCart,
                         setDisableAddToCartBtn
                       )
-                    : toast.error("Cannot Decrement");
+                    : removeFromCartHandler(
+                        _id,
+                        token,
+                        setCart,
+                        setDisableAddToCartBtn
+                      );
                 }}
               >
                 <AiOutlineMinusCircle size={21} color="#813772" />
