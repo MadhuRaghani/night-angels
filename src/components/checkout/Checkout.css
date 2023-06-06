@@ -114,3 +114,12 @@ h4 {
 .address-details-div span {
   font-weight: bold;
 }
+
+.manage-address-div {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+}

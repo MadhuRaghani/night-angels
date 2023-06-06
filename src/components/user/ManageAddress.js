@@ -1,10 +1,9 @@
 import React, { useContext } from "react";
 import { AddressContext } from "../../contexts/AddressContext";
-import AddressCard from "./AddressCard";
-import CheckoutDetails from "../cart/CheckoutDetails";
-import NewAddress from "./NewAddress";
+import AddressCard from "../checkout/AddressCard";
+import NewAddress from "../checkout/NewAddress";
 
-function Checkout() {
+function ManageAddress() {
   const { addresses } = useContext(AddressContext);
 
   return (
@@ -15,9 +14,8 @@ function Checkout() {
         ))}
         <NewAddress />
       </div>
-      <CheckoutDetails cartOrCheckout={"checkout"} />
     </div>
   );
 }
 
-export default Checkout;
+export default ManageAddress;

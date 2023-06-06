@@ -4,7 +4,7 @@ import { AddressContext } from "../../contexts/AddressContext";
 
 function NewAddress() {
   const { addAnAddress } = useContext(AddressContext);
-  const [addNewAddressClick, setAddNewAddressClick] = useState(true);
+  const [addNewAddressClick, setAddNewAddressClick] = useState(false);
 
   const clearAddressObj = {
     name: "",
@@ -39,6 +39,7 @@ function NewAddress() {
     e.preventDefault();
     addAnAddress(newAddress);
     setNewAddress({ id: uuid(), ...clearAddressObj });
+    setAddNewAddressClick(false);
   };
 
   return addNewAddressClick ? (

@@ -14,6 +14,7 @@ import User from "./components/user/User";
 import PrivateRoute from "./components/privateRoute/PrivateRoute";
 import SingleProductCard from "./components/products/SingleProductCard";
 import Checkout from "./components/checkout/Checkout";
+import ManageAddress from "./components/user/ManageAddress";
 
 function App() {
   return (
@@ -54,6 +55,14 @@ function App() {
           element={
             <PrivateRoute>
               <Checkout />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/manage-address"
+          element={
+            <PrivateRoute>
+              <ManageAddress />
             </PrivateRoute>
           }
         />
