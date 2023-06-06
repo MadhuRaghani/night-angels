@@ -7,10 +7,10 @@ function ManageAddress() {
   const { addresses } = useContext(AddressContext);
 
   return (
-    <div className="checkout-page-div">
+    <div className="manage-address-page-div">
       <div className="manage-address-div">
         {addresses.map((eachAddress) => (
-          <AddressCard address={eachAddress} />
+          <AddressCard address={eachAddress} key={eachAddress.id} />
         ))}
         <NewAddress />
       </div>

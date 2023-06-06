@@ -2,7 +2,6 @@ import React from "react";
 import ProductCard from "./ProductCard";
 
 function Products({ products }) {
-  console.log(products, products.length);
   return products.length > 0 ? (
     <div className="all-products-div">
       {products.map((eachProduct) => (

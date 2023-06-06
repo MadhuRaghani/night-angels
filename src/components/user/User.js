@@ -14,30 +14,32 @@ function User() {
 
   return (
     <div className="user-profile-div">
-      <div>
+      <div className="user-profile">
         <h2>User Profile</h2>
         <p>Name: {user.firstName + " " + user.lastName}</p>
         <p>Email: {user.email}</p>
-        <button
-          onClick={() => {
-            navigate("/manage-address");
-          }}
-        >
-          Manage Address
-        </button>
-        <button
-          onClick={() => {
-            logoutHandler(
-              setUser,
-              setToken,
-              setWishlist,
-              setCart,
-              setIsLoggedIn
-            );
-          }}
-        >
-          Logout
-        </button>
+        <div className="manage-address-and-logout-div">
+          <button
+            onClick={() => {
+              navigate("/manage-address");
+            }}
+          >
+            Manage Address
+          </button>
+          <button
+            onClick={() => {
+              logoutHandler(
+                setUser,
+                setToken,
+                setWishlist,
+                setCart,
+                setIsLoggedIn
+              );
+            }}
+          >
+            Logout
+          </button>
+        </div>
       </div>
     </div>
   );
