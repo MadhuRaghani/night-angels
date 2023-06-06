@@ -27,30 +27,34 @@ function Filters({ categories, sizes, stars }) {
       <div className="filters-sorting-div">
         <p className="filters-p">Sort</p>
         <div className="each-checkbox-and-p-div">
-          <input
-            type="radio"
-            name="sorting-radio-btn"
-            className="cursor-pointer"
-            value="HIGH_TO_LOW"
-            onChange={(event) => {
-              filtersDispatch({ type: "SORT", payload: event.target.value });
-            }}
-            checked={sortFilters === "HIGH_TO_LOW"}
-          />
-          <p>Price High To Low</p>
+          <label className="cursor-pointer">
+            <input
+              type="radio"
+              className="cursor-pointer"
+              name="sorting-radio-btn"
+              value="HIGH_TO_LOW"
+              onChange={(event) => {
+                filtersDispatch({ type: "SORT", payload: event.target.value });
+              }}
+              checked={sortFilters === "HIGH_TO_LOW"}
+            />
+            Price High To Low
+          </label>
         </div>
         <div className="each-checkbox-and-p-div">
-          <input
-            type="radio"
-            name="sorting-radio-btn"
-            className="cursor-pointer"
-            value="LOW_TO_HIGH"
-            onChange={(event) => {
-              filtersDispatch({ type: "SORT", payload: event.target.value });
-            }}
-            checked={sortFilters === "LOW_TO_HIGH"}
-          />
-          <p>Price Low To High</p>
+          <label className="cursor-pointer">
+            <input
+              type="radio"
+              className="cursor-pointer"
+              name="sorting-radio-btn"
+              value="LOW_TO_HIGH"
+              onChange={(event) => {
+                filtersDispatch({ type: "SORT", payload: event.target.value });
+              }}
+              checked={sortFilters === "LOW_TO_HIGH"}
+            />
+            Price Low To High
+          </label>
         </div>
       </div>
       <div className="filters-price-div">
@@ -75,19 +79,21 @@ function Filters({ categories, sizes, stars }) {
         <p className="filters-p">Categories</p>
         {categories.map((category) => (
           <div className="each-checkbox-and-p-div" key={category._id}>
-            <input
-              type="checkbox"
-              className="cursor-pointer"
-              value={category.categoryName}
-              onChange={(event) => {
-                filtersDispatch({
-                  type: "CATEGORIES",
-                  payload: event.target.value,
-                });
-              }}
-              checked={categoriesFilters.includes(category.categoryName)}
-            />
-            <p>{category.categoryName}</p>
+            <label className="cursor-pointer">
+              <input
+                type="checkbox"
+                className="cursor-pointer"
+                value={category.categoryName}
+                onChange={(event) => {
+                  filtersDispatch({
+                    type: "CATEGORIES",
+                    payload: event.target.value,
+                  });
+                }}
+                checked={categoriesFilters.includes(category.categoryName)}
+              />
+              {category.categoryName}
+            </label>
           </div>
         ))}
       </div>
@@ -95,19 +101,21 @@ function Filters({ categories, sizes, stars }) {
         <p className="filters-p">Sizes</p>
         {sizes.map((size) => (
           <div className="each-checkbox-and-p-div" key={size}>
-            <input
-              type="checkbox"
-              className="cursor-pointer"
-              value={size}
-              onChange={(event) => {
-                filtersDispatch({
-                  type: "SIZES",
-                  payload: event.target.value,
-                });
-              }}
-              checked={sizesFilters.includes(size)}
-            />
-            <p>{size}</p>
+            <label className="cursor-pointer">
+              <input
+                type="checkbox"
+                className="cursor-pointer"
+                value={size}
+                onChange={(event) => {
+                  filtersDispatch({
+                    type: "SIZES",
+                    payload: event.target.value,
+                  });
+                }}
+                checked={sizesFilters.includes(size)}
+              />
+              {size}
+            </label>
           </div>
         ))}
       </div>
@@ -115,17 +123,22 @@ function Filters({ categories, sizes, stars }) {
         <p className="filters-p">Stars</p>
         {stars.map((star) => (
           <div className="each-checkbox-and-p-div" key={star}>
-            <input
-              type="radio"
-              name="rating-radio-btn"
-              className="cursor-pointer"
-              value={star}
-              onChange={(event) => {
-                filtersDispatch({ type: "STARS", payload: event.target.value });
-              }}
-              checked={parseInt(starsFilters) === star}
-            />
-            <p>{star} stars & above</p>
+            <label className="cursor-pointer">
+              <input
+                type="radio"
+                name="rating-radio-btn"
+                className="cursor-pointer"
+                value={star}
+                onChange={(event) => {
+                  filtersDispatch({
+                    type: "STARS",
+                    payload: event.target.value,
+                  });
+                }}
+                checked={parseInt(starsFilters) === star}
+              />
+              {star} stars & above
+            </label>
           </div>
         ))}
       </div>

@@ -371,3 +371,14 @@ h4 {
 .zoom:hover {
   transform: scale(1.02);
 }
+
+.no-products-found-div {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+  font-size: large;
+}
