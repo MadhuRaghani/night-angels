@@ -39,10 +39,14 @@ function Login() {
                 setUser,
                 setToken,
                 setWishlist,
-                setCart,
-                navigate,
-                location
+                setCart
               );
+              // navigate to page you came from
+              if (location?.state?.from) {
+                navigate(location?.state?.from);
+              } else {
+                navigate("/");
+              }
             }}
             className="login-form"
           >

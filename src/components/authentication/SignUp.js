@@ -36,12 +36,16 @@ function SignUp() {
                 signUpData,
                 setSignUpData,
                 setErrorSignup,
-                navigate,
                 setIsLoggedIn,
                 setUser,
-                setToken,
-                location
+                setToken
               );
+              // navigate to page you came from
+              if (location?.state?.from) {
+                navigate(location?.state?.from);
+              } else {
+                navigate("/");
+              }
             }}
             autoComplete="off"
             className="login-form"

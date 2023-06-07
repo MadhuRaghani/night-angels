@@ -11,11 +11,9 @@ export const signUpHandler = async (
   signUpData,
   setSignUpData,
   setErrorSignup,
-  navigate,
   setIsLoggedIn,
   setUser,
-  setToken,
-  location
+  setToken
 ) => {
   e.preventDefault();
   try {
@@ -64,13 +62,6 @@ export const signUpHandler = async (
         setUser(response.data.createdUser);
         setToken(response.data.encodedToken);
         toast.success("Login Successful");
-
-        // navigate to page you came from
-        if (location?.state?.from) {
-          navigate(location?.state?.from);
-        } else {
-          navigate("/");
-        }
       }
     }
   } catch (e) {
@@ -103,9 +94,7 @@ export const loginHandler = async (
   setUser,
   setToken,
   setWishlist,
-  setCart,
-  navigate,
-  location
+  setCart
 ) => {
   e.preventDefault();
   try {
@@ -132,13 +121,6 @@ export const loginHandler = async (
       // setErrorLogin({ hasError: false, errorMessage: "" });
       setEmail("");
       setPassword("");
-
-      // navigate to page you came from
-      if (location?.state?.from) {
-        navigate(location?.state?.from);
-      } else {
-        navigate("/");
-      }
     }
   } catch (e) {
     console.error(e);
