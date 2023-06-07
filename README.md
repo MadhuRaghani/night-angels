@@ -2,7 +2,8 @@
 
 An online shopping website for nightwear for women.
 
-### [Demo](https://www.loom.com/share/91887da4acfb46869d2d22788a677280)
+### [Live Project](https://madhuraghani-nightangels-ecommerce.netlify.app/)
+### [Video Demo](https://www.loom.com/share/91887da4acfb46869d2d22788a677280)
 
 ## Features -
 
@@ -16,5 +17,5 @@ An online shopping website for nightwear for women.
 8. Address Managment
 9. Checkout page
 10. Authentication:
-    a. User Signup
-    b. User Login
+    - User Signup
+    - User Login
