@@ -13,7 +13,7 @@ function Home() {
       <header>
         <img
           className="hero-img"
-          src="https://julietindia.com/wp-content/uploads/2023/01/3.webp"
+          src="https://julietindia.com/cdn/shop/collections/INSIDE_BANNER_nightwear_1.png"
           alt="hero"
           onClick={() => {
             filtersDispatch({ type: "CLEAR_FILTERS" });
